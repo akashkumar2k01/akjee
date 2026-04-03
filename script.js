@@ -69,7 +69,12 @@ const Storage = {
     PROMPT_HISTORY: 'akjee_prompt_history',
   },
   save(key, data) {
-    try { localStorage.setItem(key, JSON.stringify(data)); }
+    try {
+      localStorage.setItem(key, JSON.stringify(data));
+      if (typeof FirebaseSync !== 'undefined' && FirebaseSync.initialized) {
+        FirebaseSync.scheduleSave();
+      }
+    }
     catch (e) { console.warn('Storage save failed:', e); }
   },
   load(key, def = null) {
@@ -2000,6 +2005,43 @@ const SettingsPage = {
     Storage.save(Storage.KEYS.SETTINGS, s);
   },
 
+  showSyncCode() {
+    const code = typeof FirebaseSync !== 'undefined' ? FirebaseSync.getOrCreateCode() : '—';
+    const el = document.getElementById('sync-code-display');
+    if (el) el.textContent = code;
+    if (typeof FirebaseSync !== 'undefined' && FirebaseSync.initialized) {
+      FirebaseSync._setStatus('synced');
+    } else {
+      const st = document.getElementById('cloud-sync-status');
+      if (st) st.textContent = '⚠️ Cloud sync unavailable (offline?)';
+    }
+  },
+
+  copySyncCode() {
+    const code = typeof FirebaseSync !== 'undefined' ? FirebaseSync.getOrCreateCode() : null;
+    if (!code) { AKJEE.toast('No sync code yet', 'warning'); return; }
+    navigator.clipboard.writeText(code).then(() => {
+      AKJEE.toast(`Sync code ${code} copied! Use it on any device.`, 'success');
+    }).catch(() => {
+      AKJEE.toast(`Your sync code: ${code}`, 'info');
+    });
+  },
+
+  async restoreFromCloud() {
+    const input = document.getElementById('sync-code-input');
+    const code = input?.value?.trim().toUpperCase();
+    if (!code || code.length < 4) { AKJEE.toast('Enter a valid sync code', 'warning'); return; }
+    if (typeof FirebaseSync === 'undefined') { AKJEE.toast('Cloud sync not available', 'error'); return; }
+    AKJEE.toast('Restoring from cloud...', 'info');
+    const result = await FirebaseSync.pullFromCloud(code);
+    if (result.ok) {
+      AKJEE.toast('✅ Data restored! Reloading...', 'success');
+      setTimeout(() => location.reload(), 1500);
+    } else {
+      AKJEE.toast(`❌ ${result.msg}`, 'error');
+    }
+  },
+
   exportData() {
     const json = Storage.exportAll();
     const blob = new Blob([json], { type: 'application/json' });
@@ -2136,6 +2178,12 @@ const AKJEE = {
     const loadingEl = document.getElementById('loading-screen');
 
     try {
+      // Init Firebase cloud sync
+      if (typeof FirebaseSync !== 'undefined') {
+        FirebaseSync.init();
+        await FirebaseSync.autoLoad();
+      }
+
       // Load schedule
       await Schedule.load();
 
@@ -2210,7 +2258,7 @@ const AKJEE = {
     else if (page === 'progress') ProgressPage.refresh();
     else if (page === 'prompts') PromptsPage.init();
     else if (page === 'achievements') AchievementsPage.refresh();
-    else if (page === 'settings') SettingsPage.init();
+    else if (page === 'settings') { SettingsPage.init(); SettingsPage.showSyncCode(); }
 
     // Scroll to top
     document.getElementById('main-content').scrollTop = 0;

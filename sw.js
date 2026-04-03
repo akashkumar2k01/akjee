@@ -1,14 +1,15 @@
 // AKJEE Service Worker — Offline Support
-const CACHE_NAME = 'akjee-v1.2';
+const CACHE_NAME = 'akjee-v1.3';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
-  './style.css?v=1.2',
-  './script.js?v=1.2',
+  './style.css?v=1.3',
+  './script.js?v=1.3',
   './schedule.json',
-  './prompts.js?v=1.2',
-  './quizBank.js?v=1.2',
-  './manifest.json'
+  './prompts.js?v=1.3',
+  './quizBank.js?v=1.3',
+  './manifest.json',
+  './firebase-sync.js?v=1.3'
 ];
 
 // Install event — cache all assets
