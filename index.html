@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AKJEE — Your Personal JEE Foundation Coach. 60-Day JEE Main + Advanced Study Tracker.">
+  <meta name="theme-color" content="#0a0f1e">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="AKJEE">
+  <title>AKJEE — JEE Foundation Coach</title>
+  <link rel="stylesheet" href="style.css?v=1.2">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body class="dark-theme">
+
+  <!-- ═══════════════════════════════════════════════════
+       LOADING SCREEN
+  ═══════════════════════════════════════════════════ -->
+  <div id="loading-screen">
+    <div class="loading-logo">⚡ AKJEE</div>
+    <div class="loading-spinner"></div>
+    <div class="loading-text">Loading your JEE Journey...</div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════
+       ONBOARDING OVERLAY (First visit only)
+  ═══════════════════════════════════════════════════ -->
+  <div id="onboarding-overlay" class="hidden">
+    <div class="onboarding-container">
+
+      <!-- Progress dots -->
+      <div class="onboarding-progress">
+        <div class="ob-progress-dot active" id="ob-dot-1"></div>
+        <div class="ob-progress-dot" id="ob-dot-2"></div>
+        <div class="ob-progress-dot" id="ob-dot-3"></div>
+        <div class="ob-progress-dot" id="ob-dot-4"></div>
+      </div>
+
+      <!-- SCREEN 1: Welcome -->
+      <div class="onboarding-step active" id="ob-step-1">
+        <div class="onboarding-header">
+          <span class="onboarding-logo">⚡ AKJEE</span>
+          <div class="onboarding-tagline">Your Personal JEE Foundation Coach</div>
+          <div class="onboarding-subtitle">60 Days. 3 Subjects. One Goal — JEE.</div>
+        </div>
+
+        <div class="onboarding-card">
+          <div style="text-align:center; padding: 1rem 0;">
+            <div style="font-size:3rem; margin-bottom:1rem;">🎯</div>
+            <h2 style="color:var(--text-primary); margin-bottom:0.75rem;">Start Your JEE Journey</h2>
+            <p style="color:var(--text-secondary); margin-bottom:1.5rem;">
+              A complete 60-day study planner with AI-powered learning prompts,
+              quizzes, progress tracking, and gamification — built for JEE aspirants.
+            </p>
+            <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:0.75rem; margin-bottom:1.5rem;">
+              <div style="background:var(--bg-secondary); border-radius:var(--radius-card); padding:0.875rem; text-align:center;">
+                <div style="font-size:1.5rem; font-weight:900; color:var(--blue-primary);">60</div>
+                <div style="font-size:0.7rem; color:var(--text-muted);">Study Days</div>
+              </div>
+              <div style="background:var(--bg-secondary); border-radius:var(--radius-card); padding:0.875rem; text-align:center;">
+                <div style="font-size:1.5rem; font-weight:900; color:var(--green);">3</div>
+                <div style="font-size:0.7rem; color:var(--text-muted);">Subjects</div>
+              </div>
+              <div style="background:var(--bg-secondary); border-radius:var(--radius-card); padding:0.875rem; text-align:center;">
+                <div style="font-size:1.5rem; font-weight:900; color:var(--gold);">180+</div>
+                <div style="font-size:0.7rem; color:var(--text-muted);">Topics</div>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-full btn-lg" id="ob-step1-next">
+            Get Started →
+          </button>
+        </div>
+      </div>
+
+      <!-- SCREEN 2: Profile Setup -->
+      <div class="onboarding-step" id="ob-step-2">
+        <div class="onboarding-header">
+          <h2 style="font-size:1.5rem; margin-bottom:0.25rem;">Tell us about yourself</h2>
+          <p style="color:var(--text-muted); font-size:0.875rem;">Personalise your JEE journey</p>
+        </div>
+        <div class="onboarding-card">
+          <div class="form-group">
+            <label class="form-label">Your Name *</label>
+            <input type="text" class="form-input" id="ob-name"
+              placeholder="Enter your name (e.g. Arjun, Priya, Sai)"
+              maxlength="30" autocomplete="given-name">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Study Start Date</label>
+            <input type="date" class="form-input" id="ob-start-date" value="2026-04-01">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Daily Study Hours</label>
+            <input type="number" class="form-input" id="ob-hours"
+              min="2" max="8" value="4" placeholder="4">
+            <small style="color:var(--text-muted); font-size:0.75rem;">Recommended: 4 hours/day for JEE Foundation</small>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Rest Days</label>
+            <select class="form-select" id="ob-rest-days">
+              <option value="sat-sun">Saturday &amp; Sunday</option>
+              <option value="sun-only">Sunday Only</option>
+              <option value="none">No Rest Days (Not recommended!)</option>
+            </select>
+          </div>
+          <div style="display:flex; gap:0.5rem;">
+            <button class="btn btn-ghost btn-sm" onclick="AKJEE.onboarding.back()">← Back</button>
+            <button class="btn btn-primary flex-1" id="ob-step2-next">Continue →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- SCREEN 3: Books Setup -->
+      <div class="onboarding-step" id="ob-step-3">
+        <div class="onboarding-header">
+          <h2 style="font-size:1.35rem; margin-bottom:0.25rem;">📚 Upload Your Books to AI Tools First!</h2>
+          <p style="color:var(--text-muted); font-size:0.8rem;">For best results before using AKJEE</p>
+        </div>
+        <div class="onboarding-card" style="padding:1rem;">
+          <div class="info-box" style="margin-bottom:1rem;">
+            <strong>Why?</strong> The prompts in AKJEE are designed to work WITH your uploaded books.
+            When you paste prompts into Google NotebookLM or AI tools with your books uploaded,
+            the AI generates explanations, videos, and quizzes based on <em>your actual textbooks</em> — not generic content.
+          </div>
+          <div class="books-list">
+            <div class="books-category">
+              <div class="books-category-title">⚡ Physics</div>
+              <div class="book-item"><input type="checkbox" id="b1"><label for="b1">NCERT Physics Class 11 (Part 1 &amp; 2)</label></div>
+              <div class="book-item"><input type="checkbox" id="b2"><label for="b2">HC Verma — Concepts of Physics Vol.1</label></div>
+              <div class="book-item"><input type="checkbox" id="b3"><label for="b3">DC Pandey — Mechanics Part 1 (Optional)</label></div>
+            </div>
+            <div class="books-category">
+              <div class="books-category-title">🧪 Chemistry</div>
+              <div class="book-item"><input type="checkbox" id="b4"><label for="b4">NCERT Chemistry Class 11 (Part 1 &amp; 2)</label></div>
+              <div class="book-item"><input type="checkbox" id="b5"><label for="b5">OP Tandon — Physical Chemistry (Basic)</label></div>
+              <div class="book-item"><input type="checkbox" id="b6"><label for="b6">MS Chauhan — Organic Chemistry (Basic)</label></div>
+              <div class="book-item"><input type="checkbox" id="b7"><label for="b7">VK Jaiswal — Inorganic Chemistry (Basic)</label></div>
+            </div>
+            <div class="books-category">
+              <div class="books-category-title">📐 Mathematics</div>
+              <div class="book-item"><input type="checkbox" id="b8"><label for="b8">NCERT Mathematics Class 11</label></div>
+              <div class="book-item"><input type="checkbox" id="b9"><label for="b9">RD Sharma — Mathematics Class 11</label></div>
+              <div class="book-item"><input type="checkbox" id="b10"><label for="b10">SK Goyal / Arihant — Algebra (Basic JEE)</label></div>
+            </div>
+          </div>
+          <div style="display:flex; gap:0.5rem; flex-direction:column; margin-top:1rem;">
+            <button class="btn btn-primary" id="ob-step3-next">I've Uploaded My Books →</button>
+            <button class="btn btn-ghost btn-sm" id="ob-step3-skip">Skip for now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- SCREEN 4: All Set -->
+      <div class="onboarding-step" id="ob-step-4">
+        <div class="onboarding-card" style="text-align:center;">
+          <div class="success-checkmark">✅</div>
+          <h2 style="font-size:1.5rem; margin-bottom:0.5rem;">Welcome, <span id="ob-welcome-name">Student</span>! 🎯</h2>
+          <p style="color:var(--text-secondary); margin-bottom:1.5rem;">
+            Your 60-day JEE Foundation journey starts now!
+          </p>
+          <div class="stats-preview">
+            <div class="stat-preview-item">
+              <span class="stat-preview-num">60</span>
+              <span class="stat-preview-label">Study Days</span>
+            </div>
+            <div class="stat-preview-item">
+              <span class="stat-preview-num">3</span>
+              <span class="stat-preview-label">Subjects</span>
+            </div>
+            <div class="stat-preview-item">
+              <span class="stat-preview-num">180+</span>
+              <span class="stat-preview-label">Topics</span>
+            </div>
+          </div>
+          <button class="btn btn-gold btn-full btn-lg" id="ob-finish">
+            Start My JEE Journey 🚀
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════
+       MAIN APP WRAPPER
+  ═══════════════════════════════════════════════════ -->
+  <div id="app-wrapper" class="hidden">
+
+    <!-- TOP HEADER -->
+    <header id="top-header">
+      <a class="header-logo" href="#" onclick="AKJEE.navigate('home'); return false;">
+        <span class="header-logo-text">⚡ AKJEE</span>
+        <span class="header-subtitle">JEE Foundation</span>
+      </a>
+      <div class="header-day-info">
+        <span class="header-date" id="header-date">April 1, 2026</span>
+        <span class="header-day-count" id="header-day-count">Day 1 of 60</span>
+      </div>
+      <div class="header-stats">
+        <div class="header-stat header-streak" title="Current Streak">
+          <span class="stat-icon streak-fire">🔥</span>
+          <span id="header-streak">0</span>
+        </div>
+        <div class="header-stat header-points" title="Total Points">
+          <span class="stat-icon">⭐</span>
+          <span id="header-points">0</span>
+        </div>
+        <div class="header-avatar" id="header-avatar" title="Profile" onclick="AKJEE.navigate('settings')">A</div>
+      </div>
+    </header>
+
+    <!-- LEFT SIDEBAR (Desktop) -->
+    <aside id="sidebar">
+      <nav class="sidebar-nav">
+        <button class="sidebar-nav-item active" data-page="home" onclick="AKJEE.navigate('home')">
+          <span class="sidebar-nav-icon">🏠</span> Dashboard
+        </button>
+        <button class="sidebar-nav-item" data-page="today" onclick="AKJEE.navigate('today')">
+          <span class="sidebar-nav-icon">📅</span> Today's Plan
+        </button>
+        <button class="sidebar-nav-item" data-page="progress" onclick="AKJEE.navigate('progress')">
+          <span class="sidebar-nav-icon">📊</span> Progress
+        </button>
+        <div class="sidebar-divider"></div>
+        <button class="sidebar-nav-item" data-page="quiz" onclick="AKJEE.navigate('quiz')">
+          <span class="sidebar-nav-icon">🧪</span> Quiz
+        </button>
+        <button class="sidebar-nav-item" data-page="tests" onclick="AKJEE.navigate('tests')">
+          <span class="sidebar-nav-icon">📝</span> Tests
+        </button>
+        <div class="sidebar-divider"></div>
+        <button class="sidebar-nav-item" data-page="prompts" onclick="AKJEE.navigate('prompts')">
+          <span class="sidebar-nav-icon">💬</span> AI Prompts
+        </button>
+        <button class="sidebar-nav-item" data-page="achievements" onclick="AKJEE.navigate('achievements')">
+          <span class="sidebar-nav-icon">🏆</span> Achievements
+        </button>
+        <div class="sidebar-divider"></div>
+        <button class="sidebar-nav-item" data-page="settings" onclick="AKJEE.navigate('settings')">
+          <span class="sidebar-nav-icon">⚙️</span> Settings
+        </button>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="sidebar-streak-card">
+          <div class="sidebar-streak-num" id="sidebar-streak">🔥 0</div>
+          <div class="sidebar-streak-label">Day Streak</div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main id="main-content">
+
+      <!-- ═══ PAGE 1: DASHBOARD ═══ -->
+      <section id="page-home" class="page active">
+        <div class="page-container">
+
+          <!-- Hero -->
+          <div class="hero-section">
+            <div class="hero-greeting" id="hero-greeting">Good Morning! 👋</div>
+            <div class="hero-quote" id="hero-quote">"Every expert was once a beginner."</div>
+            <div class="hero-date" id="hero-date">April 1, 2026 — Day 1 of 60</div>
+          </div>
+
+          <!-- Stats overview -->
+          <div class="grid-3 mb-3" id="home-stats-grid">
+            <div class="stat-card">
+              <div style="display:flex; justify-content:center; margin-bottom:0.5rem;">
+                <div class="progress-ring-wrap">
+                  <svg width="80" height="80" viewBox="0 0 80 80">
+                    <circle class="progress-ring-bg" cx="40" cy="40" r="32"/>
+                    <circle class="progress-ring-fill blue" id="overall-ring"
+                      cx="40" cy="40" r="32"
+                      stroke-dasharray="201.06"
+                      stroke-dashoffset="201.06"/>
+                  </svg>
+                  <div class="progress-ring-text">
+                    <span class="ring-percent" id="overall-percent">0%</span>
+                    <span class="ring-label">Done</span>
+                  </div>
+                </div>
+              </div>
+              <div class="stat-label">Overall Progress</div>
+              <div class="stat-sublabel" id="home-days-done">0 / 60 days</div>
+            </div>
+            <div class="stat-card">
+              <span class="stat-icon streak-fire">🔥</span>
+              <div class="stat-number" id="home-streak">0</div>
+              <div class="stat-label">Day Streak</div>
+              <div class="stat-sublabel">Keep it going!</div>
+            </div>
+            <div class="stat-card">
+              <span class="stat-icon">⭐</span>
+              <div class="stat-number" id="home-points">0</div>
+              <div class="stat-label">Total Points</div>
+              <div class="stat-sublabel" id="home-level">Level 1 — Starter</div>
+            </div>
+          </div>
+
+          <!-- Today Quick View -->
+          <div class="section-heading">📅 Today's Topics</div>
+          <div class="today-quick-card mb-3" id="home-today-card">
+            <div class="today-topics-row" id="home-today-topics">
+              <div class="shimmer" style="height:40px; border-radius:8px;"></div>
+              <div class="shimmer" style="height:40px; border-radius:8px;"></div>
+              <div class="shimmer" style="height:40px; border-radius:8px;"></div>
+            </div>
+            <button class="btn btn-primary btn-sm mt-1" onclick="AKJEE.navigate('today')">
+              Go to Today's Plan →
+            </button>
+          </div>
+
+          <!-- Overall progress bar -->
+          <div class="section-heading">🗺️ 60-Day Journey</div>
+          <div class="card mb-3">
+            <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem;">
+              <span class="text-sm fw-700">Progress</span>
+              <span class="text-sm text-blue" id="journey-percent-label">0%</span>
+            </div>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar-fill" id="journey-progress-bar" style="width:0%"></div>
+            </div>
+            <div style="display:flex; justify-content:space-between; margin-top:0.5rem;">
+              <span class="text-xs text-muted">Day 1 — Apr 1</span>
+              <span class="text-xs text-muted" id="journey-day-label">0 / 60 study days</span>
+              <span class="text-xs text-muted">Day 60 — Jun 1</span>
+            </div>
+          </div>
+
+          <!-- Subject progress rings -->
+          <div class="section-heading">📚 Subject Progress</div>
+          <div class="subject-progress-grid mb-3">
+            <div class="subject-progress-card physics">
+              <div class="subject-progress-name">⚡ Physics</div>
+              <div style="display:flex; justify-content:center;">
+                <div class="progress-ring-wrap">
+                  <svg width="80" height="80" viewBox="0 0 80 80">
+                    <circle class="progress-ring-bg" cx="40" cy="40" r="32"/>
+                    <circle class="progress-ring-fill blue" id="physics-ring"
+                      cx="40" cy="40" r="32"
+                      stroke-dasharray="201.06"
+                      stroke-dashoffset="201.06"/>
+                  </svg>
+                  <div class="progress-ring-text">
+                    <span class="ring-percent" id="physics-percent">0%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="subject-progress-stats" id="physics-stats">0 / 60 topics</div>
+            </div>
+            <div class="subject-progress-card chemistry">
+              <div class="subject-progress-name">🧪 Chemistry</div>
+              <div style="display:flex; justify-content:center;">
+                <div class="progress-ring-wrap">
+                  <svg width="80" height="80" viewBox="0 0 80 80">
+                    <circle class="progress-ring-bg" cx="40" cy="40" r="32"/>
+                    <circle class="progress-ring-fill green" id="chemistry-ring"
+                      cx="40" cy="40" r="32"
+                      stroke-dasharray="201.06"
+                      stroke-dashoffset="201.06"/>
+                  </svg>
+                  <div class="progress-ring-text">
+                    <span class="ring-percent" id="chemistry-percent">0%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="subject-progress-stats" id="chemistry-stats">0 / 60 topics</div>
+            </div>
+            <div class="subject-progress-card math">
+              <div class="subject-progress-name">📐 Math</div>
+              <div style="display:flex; justify-content:center;">
+                <div class="progress-ring-wrap">
+                  <svg width="80" height="80" viewBox="0 0 80 80">
+                    <circle class="progress-ring-bg" cx="40" cy="40" r="32"/>
+                    <circle class="progress-ring-fill orange" id="math-ring"
+                      cx="40" cy="40" r="32"
+                      stroke-dasharray="201.06"
+                      stroke-dashoffset="201.06"/>
+                  </svg>
+                  <div class="progress-ring-text">
+                    <span class="ring-percent" id="math-percent">0%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="subject-progress-stats" id="math-stats">0 / 60 topics</div>
+            </div>
+          </div>
+
+          <!-- Weekly calendar -->
+          <div class="section-heading">🗓️ This Week</div>
+          <div class="card mb-3">
+            <div class="weekly-calendar" id="weekly-calendar"></div>
+          </div>
+
+          <!-- Motivation -->
+          <div class="motivation-card mb-3" id="motivation-card">
+            <div class="motivation-text" id="motivation-text">"Every JEE topper started exactly where you are. Let's GO!"</div>
+            <div class="motivation-phase" id="motivation-phase">Phase 1 — Foundation Basics</div>
+          </div>
+
+          <!-- Upcoming topics -->
+          <div class="section-heading">⏭️ Coming Up Next</div>
+          <div style="display:flex; gap:0.75rem; overflow-x:auto; padding-bottom:0.5rem;" id="upcoming-days"></div>
+
+        </div>
+      </section>
+
+      <!-- ═══ PAGE 2: TODAY'S PLAN ═══ -->
+      <section id="page-today" class="page">
+        <div class="page-container">
+          <div class="page-header">
+            <div class="page-title">📅 Today's Plan</div>
+          </div>
+
+          <!-- Date selector -->
+          <div class="date-selector">
+            <button class="date-nav-btn" id="today-prev-btn" onclick="AKJEE.todayPage.prevDay()">‹</button>
+            <div class="date-info">
+              <div class="date-main" id="today-date-main">Wednesday, April 1, 2026</div>
+              <div class="date-sub" id="today-date-sub">Day 1 of 60 — Phase 1: Foundation Basics</div>
+            </div>
+            <div class="date-status-pill date-status-today" id="today-date-status">Today</div>
+            <button class="date-nav-btn" id="today-next-btn" onclick="AKJEE.todayPage.nextDay()">›</button>
+          </div>
+
+          <!-- Topic cards & timetable will be injected here -->
+          <div id="today-content"></div>
+
+        </div>
+      </section>
+
+      <!-- ═══ PAGE 3: PROGRESS ═══ -->
+      <section id="page-progress" class="page">
+        <div class="page-container">
+          <div class="page-header">
+            <div class="page-title">📊 Progress Tracker</div>
+          </div>
+
+          <!-- Stats strip -->
+          <div class="stats-strip">
+            <div class="stats-strip-card">
+              <div class="stats-strip-value" id="prog-days-done">0</div>
+              <div class="stats-strip-label">Days Done</div>
+            </div>
+            <div class="stats-strip-card">
+              <div class="stats-strip-value" id="prog-topics">0</div>
+              <div class="stats-strip-label">Topics Done</div>
+            </div>
+            <div class="stats-strip-card">
+              <div class="stats-strip-value" id="prog-avg-score">—</div>
+              <div class="stats-strip-label">Avg Quiz Score</div>
+            </div>
+            <div class="stats-strip-card">
+              <div class="stats-strip-value" id="prog-level">Lv.1</div>
+              <div class="stats-strip-label">Level</div>
+            </div>
+          </div>
+
+          <!-- Phase progress -->
+          <div class="section-heading">🎯 Phase Progress</div>
+          <div id="phase-progress-cards" class="mb-3"></div>
+
+          <!-- Subject breakdown -->
+          <div class="section-heading">📚 Subject Progress</div>
+          <div class="subject-progress-grid mb-3" id="prog-subject-grid"></div>
+
+          <!-- Heatmap -->
+          <div class="section-heading">🗓️ Activity Heatmap</div>
+          <div class="card mb-3">
+            <div style="display:flex; gap:1rem; justify-content:flex-end; margin-bottom:0.5rem; flex-wrap:wrap;">
+              <span class="text-xs" style="display:flex;align-items:center;gap:4px;"><span style="width:12px;height:12px;background:var(--green);border-radius:2px;display:inline-block;"></span> Complete</span>
+              <span class="text-xs" style="display:flex;align-items:center;gap:4px;"><span style="width:12px;height:12px;background:var(--gold);border-radius:2px;display:inline-block;"></span> Partial</span>
+              <span class="text-xs" style="display:flex;align-items:center;gap:4px;"><span style="width:12px;height:12px;background:var(--red);opacity:0.6;border-radius:2px;display:inline-block;"></span> Missed</span>
+            </div>
+            <div class="heatmap-grid" id="heatmap-grid"></div>
+          </div>
+
+          <!-- Performance chart -->
+          <div class="section-heading">📈 Weekly Performance</div>
+          <div class="card mb-3">
+            <div class="bar-chart" id="perf-chart"></div>
+          </div>
+
+          <!-- Completed topics -->
+          <div class="section-heading">✅ Completed Topics</div>
+          <div class="card mb-3">
+            <div class="filter-pills" id="prog-filter-pills">
+              <span class="filter-pill active" onclick="AKJEE.progressPage.filterTopics('all', this)">All</span>
+              <span class="filter-pill" onclick="AKJEE.progressPage.filterTopics('physics', this)">Physics</span>
+              <span class="filter-pill" onclick="AKJEE.progressPage.filterTopics('chemistry', this)">Chemistry</span>
+              <span class="filter-pill" onclick="AKJEE.progressPage.filterTopics('math', this)">Math</span>
+            </div>
+            <div id="completed-topics-list">
+              <div class="empty-state">
+                <span class="empty-state-icon">📚</span>
+                <div class="empty-state-title">No topics completed yet</div>
+                <div class="empty-state-desc">Complete your first topic to see it here!</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ═══ PAGE 4: QUIZ ═══ -->
+      <section id="page-quiz" class="page">
+        <div class="page-container">
+          <div id="quiz-landing">
+            <div class="page-header">
+              <div class="page-title">🧪 Quiz Arena</div>
+              <div class="page-subtitle">Test your knowledge and earn points!</div>
+            </div>
+
+            <!-- Quiz modes -->
+            <div class="section-heading">Choose Quiz Mode</div>
+            <div class="quiz-mode-grid mb-3">
+              <div class="quiz-mode-card" onclick="AKJEE.quizModule.start('daily')">
+                <span class="quiz-mode-icon">⚡</span>
+                <div class="quiz-mode-name">Daily Quick Quiz</div>
+                <div class="quiz-mode-desc">5 Qs · 5 min · Today's topics</div>
+              </div>
+              <div class="quiz-mode-card" onclick="AKJEE.quizModule.start('topic')">
+                <span class="quiz-mode-icon">📖</span>
+                <div class="quiz-mode-name">Topic Quiz</div>
+                <div class="quiz-mode-desc">10 Qs · 10 min · One topic</div>
+              </div>
+              <div class="quiz-mode-card" onclick="AKJEE.quizModule.start('subject')">
+                <span class="quiz-mode-icon">📚</span>
+                <div class="quiz-mode-name">Subject Quiz</div>
+                <div class="quiz-mode-desc">20 Qs · 20 min · One subject</div>
+              </div>
+              <div class="quiz-mode-card" onclick="AKJEE.quizModule.start('mixed')">
+                <span class="quiz-mode-icon">🎲</span>
+                <div class="quiz-mode-name">Mixed Quiz</div>
+                <div class="quiz-mode-desc">15 Qs · 15 min · All subjects</div>
+              </div>
+              <div class="quiz-mode-card" onclick="AKJEE.quizModule.start('weak')">
+                <span class="quiz-mode-icon">💪</span>
+                <div class="quiz-mode-name">Weak Area</div>
+                <div class="quiz-mode-desc">10 Qs · From low-score topics</div>
+              </div>
+            </div>
+
+            <!-- Quiz history -->
+            <div class="section-heading">📋 Recent Quizzes</div>
+            <div id="quiz-history-list">
+              <div class="empty-state">
+                <span class="empty-state-icon">🧪</span>
+                <div class="empty-state-title">No quizzes taken yet</div>
+                <div class="empty-state-desc">Start a quiz above to track your progress!</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quiz interface (hidden until quiz starts) -->
+          <div id="quiz-interface" class="hidden">
+            <div class="quiz-interface">
+              <div class="quiz-progress-bar">
+                <div class="quiz-progress-fill" id="quiz-q-progress"></div>
+              </div>
+              <div class="quiz-header">
+                <span class="quiz-q-count" id="quiz-q-count">Q1 of 10</span>
+                <span class="quiz-timer" id="quiz-timer">10:00</span>
+                <button class="btn btn-ghost btn-sm" onclick="AKJEE.quizModule.exitQuiz()">Exit</button>
+              </div>
+              <div class="question-card">
+                <div class="question-text" id="quiz-question-text"></div>
+                <div class="options-grid" id="quiz-options"></div>
+              </div>
+              <div class="quiz-nav-row">
+                <button class="btn btn-ghost btn-sm" id="quiz-skip-btn" onclick="AKJEE.quizModule.skip()">Skip ⏭️</button>
+                <button class="btn btn-secondary btn-sm" id="quiz-bookmark-btn" onclick="AKJEE.quizModule.bookmark()">Bookmark ⭐</button>
+                <button class="btn btn-primary" id="quiz-next-btn" onclick="AKJEE.quizModule.nextQuestion()" disabled>Next →</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quiz results (hidden until quiz ends) -->
+          <div id="quiz-results" class="hidden">
+            <div class="quiz-result-card">
+              <div class="result-score" id="result-score">0</div>
+              <div class="result-percent" id="result-percent">0 / 10</div>
+              <div class="result-badge" id="result-badge">Average</div>
+              <div class="result-stats-row">
+                <div class="result-stat">
+                  <div class="result-stat-num correct" id="result-correct">0</div>
+                  <div class="result-stat-label">Correct ✅</div>
+                </div>
+                <div class="result-stat">
+                  <div class="result-stat-num wrong" id="result-wrong">0</div>
+                  <div class="result-stat-label">Wrong ❌</div>
+                </div>
+                <div class="result-stat">
+                  <div class="result-stat-num skipped" id="result-skipped">0</div>
+                  <div class="result-stat-label">Skipped ⏭️</div>
+                </div>
+              </div>
+              <div style="color:var(--gold); font-weight:700; margin-top:0.75rem;" id="result-points-earned"></div>
+            </div>
+            <div style="display:flex; gap:0.75rem; margin-bottom:1.5rem; flex-wrap:wrap;">
+              <button class="btn btn-primary flex-1" onclick="AKJEE.quizModule.reviewAnswers()">Review Answers 📋</button>
+              <button class="btn btn-secondary flex-1" onclick="AKJEE.quizModule.backToLanding()">Take Another Quiz ↺</button>
+              <button class="btn btn-ghost" onclick="AKJEE.navigate('today')">Today's Plan →</button>
+            </div>
+            <div id="quiz-review-list"></div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ═══ PAGE 5: TESTS ═══ -->
+      <section id="page-tests" class="page">
+        <div class="page-container">
+          <div id="test-landing">
+            <div class="page-header">
+              <div class="page-title">📝 Test Center</div>
+              <div class="page-subtitle">JEE-style tests to benchmark your preparation</div>
+            </div>
+
+            <div class="section-heading">Choose Test Type</div>
+            <div class="test-type-cards mb-3">
+              <div class="test-type-card" onclick="AKJEE.testModule.start('daily')">
+                <span class="test-type-icon">📋</span>
+                <div class="test-type-name">Daily Mini Test</div>
+                <div class="test-type-info">10 Qs · 15 min · Today's topics · +15 pts</div>
+              </div>
+              <div class="test-type-card" onclick="AKJEE.testModule.start('weekly')">
+                <span class="test-type-icon">📊</span>
+                <div class="test-type-name">Weekly Test</div>
+                <div class="test-type-info">30 Qs · 45 min · This week's topics · +30 pts</div>
+              </div>
+              <div class="test-type-card" onclick="AKJEE.testModule.start('phase')">
+                <span class="test-type-icon">🏆</span>
+                <div class="test-type-name">Phase Test</div>
+                <div class="test-type-info">45 Qs · 60 min · Full phase coverage · +50 pts</div>
+              </div>
+              <div class="test-type-card" onclick="AKJEE.testModule.start('mock')">
+                <span class="test-type-icon">🎯</span>
+                <div class="test-type-name">JEE Mock Test</div>
+                <div class="test-type-info">75 Qs · 180 min · Full JEE pattern · +100 pts</div>
+              </div>
+            </div>
+
+            <!-- Test history -->
+            <div class="section-heading">📋 Test History</div>
+            <div class="card" style="overflow-x:auto;">
+              <div id="test-history-container">
+                <div class="empty-state">
+                  <span class="empty-state-icon">📝</span>
+                  <div class="empty-state-title">No tests taken yet</div>
+                  <div class="empty-state-desc">Take your first test to see results here!</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Test interface -->
+          <div id="test-interface" class="hidden">
+            <div class="quiz-interface">
+              <div class="quiz-header">
+                <span class="quiz-q-count" id="test-q-count">Q1 of 30</span>
+                <span class="quiz-timer" id="test-timer">45:00</span>
+                <button class="btn btn-danger btn-sm" onclick="AKJEE.testModule.confirmSubmit()">Submit Test</button>
+              </div>
+              <div class="quiz-progress-bar">
+                <div class="quiz-progress-fill" id="test-q-progress"></div>
+              </div>
+              <div class="question-card">
+                <div class="question-text" id="test-question-text"></div>
+                <div class="options-grid" id="test-options"></div>
+              </div>
+              <div class="quiz-nav-row">
+                <button class="btn btn-ghost btn-sm" onclick="AKJEE.testModule.prevQ()">← Prev</button>
+                <button class="btn btn-secondary btn-sm" onclick="AKJEE.testModule.markReview()">Mark for Review</button>
+                <button class="btn btn-ghost btn-sm" onclick="AKJEE.testModule.clearResponse()">Clear</button>
+                <button class="btn btn-primary btn-sm" onclick="AKJEE.testModule.nextQ()">Next →</button>
+              </div>
+
+              <!-- Question palette -->
+              <div class="card mt-2">
+                <div class="palette-title">Question Palette</div>
+                <div class="palette-grid" id="test-palette"></div>
+                <div style="display:flex; gap:0.75rem; margin-top:0.75rem; flex-wrap:wrap; font-size:0.7rem; color:var(--text-muted);">
+                  <span style="display:flex;align-items:center;gap:4px;"><span style="width:12px;height:12px;background:var(--green);border-radius:3px;"></span> Answered</span>
+                  <span style="display:flex;align-items:center;gap:4px;"><span style="width:12px;height:12px;background:var(--gold);border-radius:3px;"></span> Marked</span>
+                  <span style="display:flex;align-items:center;gap:4px;"><span style="width:12px;height:12px;background:var(--bg-secondary);border-radius:3px;border:1px solid var(--border-color);"></span> Not visited</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Test results -->
+          <div id="test-results" class="hidden">
+            <div class="quiz-result-card">
+              <div class="result-score" id="test-result-score">0</div>
+              <div class="result-percent" id="test-result-label">0 / 30</div>
+              <div class="result-badge" id="test-result-badge">Average</div>
+              <div class="result-stats-row">
+                <div class="result-stat">
+                  <div class="result-stat-num correct" id="test-result-correct">0</div>
+                  <div class="result-stat-label">Correct</div>
+                </div>
+                <div class="result-stat">
+                  <div class="result-stat-num wrong" id="test-result-wrong">0</div>
+                  <div class="result-stat-label">Wrong</div>
+                </div>
+                <div class="result-stat">
+                  <div class="result-stat-num skipped" id="test-result-skipped">0</div>
+                  <div class="result-stat-label">Skipped</div>
+                </div>
+              </div>
+              <div style="color:var(--gold); font-weight:700; margin-top:0.75rem;" id="test-result-points"></div>
+            </div>
+            <div style="display:flex; gap:0.75rem; margin-bottom:1.5rem;">
+              <button class="btn btn-secondary flex-1" onclick="AKJEE.testModule.backToLanding()">← Back to Tests</button>
+              <button class="btn btn-primary flex-1" onclick="AKJEE.navigate('today')">Continue Studying →</button>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ═══ PAGE 6: PROMPTS ═══ -->
+      <section id="page-prompts" class="page">
+        <div class="page-container">
+          <div class="page-header">
+            <div class="page-title">💬 AI Study Material Generator</div>
+            <div class="page-subtitle">Generate prompts for videos, audio, notes, and quizzes using AI tools</div>
+          </div>
+
+          <div class="info-box mb-3">
+            🤖 Copy these prompts and paste them into <strong>Google NotebookLM</strong>, <strong>Claude</strong>, or <strong>ChatGPT</strong>
+            (with your textbooks uploaded) to get personalized study materials.
+            <br><br>Today's prompts generated: <strong id="today-prompt-count">0</strong>
+          </div>
+
+          <!-- Selector -->
+          <div class="prompt-selector">
+            <div class="prompt-selector-row">
+              <div class="form-group mb-0">
+                <label class="form-label">Subject</label>
+                <select class="form-select" id="prompt-subject-select" onchange="AKJEE.promptsPage.updateTopicDropdown()">
+                  <option value="Physics">⚡ Physics</option>
+                  <option value="Chemistry">🧪 Chemistry</option>
+                  <option value="Math">📐 Mathematics</option>
+                </select>
+              </div>
+              <div class="form-group mb-0">
+                <label class="form-label">Topic</label>
+                <select class="form-select" id="prompt-topic-select"></select>
+              </div>
+              <div class="form-group mb-0">
+                <label class="form-label">Day</label>
+                <select class="form-select" id="prompt-day-select" onchange="AKJEE.promptsPage.onDayChange()"></select>
+              </div>
+            </div>
+            <button class="btn btn-secondary btn-sm" onclick="AKJEE.promptsPage.useToday()">📅 Use Today's Topics</button>
+          </div>
+
+          <!-- Tabs -->
+          <div class="prompt-tabs">
+            <button class="prompt-tab active" onclick="AKJEE.promptsPage.switchTab('video', this)">📹 Video</button>
+            <button class="prompt-tab" onclick="AKJEE.promptsPage.switchTab('audio', this)">🎧 Audio</button>
+            <button class="prompt-tab" onclick="AKJEE.promptsPage.switchTab('notes', this)">📄 Notes</button>
+            <button class="prompt-tab" onclick="AKJEE.promptsPage.switchTab('quiz', this)">❓ Quiz</button>
+            <button class="prompt-tab" onclick="AKJEE.promptsPage.switchTab('test', this)">📝 Test</button>
+          </div>
+
+          <!-- Generated prompt display -->
+          <div class="prompt-output-area">
+            <div class="prompt-text-box" id="prompt-output-box">
+              Select a subject and topic above, then click "Generate Prompt"
+            </div>
+            <div class="copy-btn-wrap">
+              <button class="btn btn-primary" onclick="AKJEE.promptsPage.generate()">⚡ Generate Prompt</button>
+              <button class="btn btn-secondary" id="copy-prompt-btn" onclick="AKJEE.promptsPage.copy()">📋 Copy to Clipboard</button>
+              <span class="copy-success" id="copy-success">✅ Copied!</span>
+            </div>
+          </div>
+
+          <!-- Prompt history -->
+          <div class="section-heading mt-3">🕐 Recent Prompts</div>
+          <div id="prompt-history-list">
+            <div class="empty-state">
+              <span class="empty-state-icon">💬</span>
+              <div class="empty-state-title">No prompts generated yet</div>
+              <div class="empty-state-desc">Generate your first prompt above!</div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ═══ PAGE 7: ACHIEVEMENTS ═══ -->
+      <section id="page-achievements" class="page">
+        <div class="page-container">
+          <div class="page-header">
+            <div class="page-title">🏆 Achievements</div>
+          </div>
+
+          <!-- Level banner -->
+          <div class="level-banner">
+            <div class="level-badge badge-glow">
+              <span class="level-badge-num" id="ach-level-num">1</span>
+              <span class="level-badge-text">LEVEL</span>
+            </div>
+            <div class="level-info">
+              <div class="level-name" id="ach-level-name">Starter</div>
+              <div class="level-pts" id="ach-level-pts">0 pts — Next level at 500 pts</div>
+              <div class="progress-bar-wrap" style="max-width:300px;">
+                <div class="progress-bar-fill gold" id="level-progress-bar" style="width:0%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Personal records -->
+          <div class="section-heading">🏅 Personal Records</div>
+          <div class="records-grid mb-3" id="personal-records"></div>
+
+          <!-- Badges -->
+          <div class="section-heading">🎖️ Badges</div>
+          <div class="badges-grid" id="badges-grid"></div>
+
+        </div>
+      </section>
+
+      <!-- ═══ PAGE 8: SETTINGS ═══ -->
+      <section id="page-settings" class="page">
+        <div class="page-container">
+          <div class="page-header">
+            <div class="page-title">⚙️ Settings</div>
+          </div>
+
+          <!-- Profile -->
+          <div class="settings-section">
+            <div class="settings-section-header">👤 Profile</div>
+            <div class="settings-row">
+              <div>
+                <div class="settings-row-label">Student Name</div>
+                <div class="settings-row-desc" id="settings-name-display">Not set</div>
+              </div>
+              <button class="btn btn-secondary btn-sm" onclick="AKJEE.settingsPage.editName()">Edit</button>
+            </div>
+            <div class="settings-row">
+              <div>
+                <div class="settings-row-label">Start Date</div>
+                <div class="settings-row-desc" id="settings-start-date">April 1, 2026</div>
+              </div>
+            </div>
+            <div class="settings-row">
+              <div>
+                <div class="settings-row-label">Days Remaining</div>
+                <div class="settings-row-desc" id="settings-days-remaining">60 days</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Study Preferences -->
+          <div class="settings-section">
+            <div class="settings-section-header">📚 Study Preferences</div>
+            <div class="settings-row">
+              <div>
+                <div class="settings-row-label">Daily Study Hours</div>
+                <div class="settings-row-desc">How many hours per day</div>
+              </div>
+              <input type="number" class="form-input" id="settings-hours"
+                style="width:80px;" min="2" max="8"
+                onchange="AKJEE.settingsPage.saveHours(this.value)">
+            </div>
+            <div class="settings-row">
+              <div>
+                <div class="settings-row-label">Rest Days</div>
+                <div class="settings-row-desc">Days off from studying</div>
+              </div>
+              <select class="form-select" id="settings-rest-days"
+                style="width:160px;" onchange="AKJEE.settingsPage.saveRestDays(this.value)">
+                <option value="sat-sun">Sat &amp; Sun</option>
+                <option value="sun-only">Sunday Only</option>
+                <option value="none">None</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- App Settings -->
+          <div class="settings-section">
+            <div class="settings-section-header">🎨 App Settings</div>
+            <div class="settings-row">
+              <div>
+                <div class="settings-row-label">Dark Mode</div>
+                <div class="settings-row-desc">Dark navy theme</div>
+              </div>
+              <label class="toggle-switch">
+                <input type="checkbox" id="settings-dark-mode" checked onchange="AKJEE.settingsPage.toggleTheme(this.checked)">
+                <span class="toggle-slider"></span>
+              </label>
+            </div>
+            <div class="settings-row">
+              <div>
+                <div class="settings-row-label">Animations</div>
+                <div class="settings-row-desc">Enable UI animations</div>
+              </div>
+              <label class="toggle-switch">
+                <input type="checkbox" id="settings-animations" checked onchange="AKJEE.settingsPage.toggleAnimations(this.checked)">
+                <span class="toggle-slider"></span>
+              </label>
+            </div>
+            <div class="settings-row">
+              <div>
+                <div class="settings-row-label">Font Size</div>
+              </div>
+              <select class="form-select" id="settings-font-size" style="width:120px;" onchange="AKJEE.settingsPage.changeFontSize(this.value)">
+                <option value="normal">Medium</option>
+                <option value="small">Small</option>
+                <option value="large">Large</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Data Management -->
+          <div class="settings-section">
+            <div class="settings-section-header">💾 Data Management</div>
+            <div class="settings-row">
+              <div>
+                <div class="settings-row-label">Export Data</div>
+                <div class="settings-row-desc">Download backup as JSON</div>
+              </div>
+              <button class="btn btn-secondary btn-sm" onclick="AKJEE.settingsPage.exportData()">Export 📥</button>
+            </div>
+            <div class="settings-row">
+              <div>
+                <div class="settings-row-label">Import Data</div>
+                <div class="settings-row-desc">Restore from JSON backup</div>
+              </div>
+              <button class="btn btn-secondary btn-sm" onclick="document.getElementById('import-file').click()">Import 📤</button>
+              <input type="file" id="import-file" accept=".json" style="display:none" onchange="AKJEE.settingsPage.importData(this)">
+            </div>
+            <div class="settings-row">
+              <div>
+                <div class="settings-row-label">Reset All Data</div>
+                <div class="settings-row-desc" style="color:var(--red);">⚠️ Clears everything — cannot be undone</div>
+              </div>
+              <button class="btn btn-danger btn-sm" onclick="AKJEE.settingsPage.confirmReset()">Reset ⚠️</button>
+            </div>
+          </div>
+
+          <!-- App Info -->
+          <div class="settings-section">
+            <div class="settings-section-header">ℹ️ App Info</div>
+            <div class="settings-row">
+              <div class="settings-row-label">Version</div>
+              <span class="text-muted text-sm">AKJEE v1.0</span>
+            </div>
+            <div class="settings-row">
+              <div class="settings-row-label">Study Period</div>
+              <span class="text-muted text-sm">Apr 1 – Jun 1, 2026</span>
+            </div>
+            <div class="settings-row">
+              <div class="settings-row-label">Built With</div>
+              <span class="text-muted text-sm">HTML + CSS + JS (No frameworks)</span>
+            </div>
+            <div class="settings-row">
+              <div class="settings-row-label">Storage</div>
+              <span class="text-muted text-sm">Browser LocalStorage</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- BOTTOM NAVIGATION (Mobile) -->
+    <nav id="bottom-nav">
+      <button class="nav-item active" data-page="home" onclick="AKJEE.navigate('home')">
+        <span class="nav-icon">🏠</span>
+        <span class="nav-label">Home</span>
+      </button>
+      <button class="nav-item" data-page="today" onclick="AKJEE.navigate('today')">
+        <span class="nav-icon">📅</span>
+        <span class="nav-label">Today</span>
+      </button>
+      <button class="nav-item" data-page="progress" onclick="AKJEE.navigate('progress')">
+        <span class="nav-icon">📊</span>
+        <span class="nav-label">Progress</span>
+      </button>
+      <button class="nav-item" data-page="quiz" onclick="AKJEE.navigate('quiz')">
+        <span class="nav-icon">🧪</span>
+        <span class="nav-label">Quiz</span>
+      </button>
+      <button class="nav-item" data-page="prompts" onclick="AKJEE.navigate('prompts')">
+        <span class="nav-icon">💬</span>
+        <span class="nav-label">Prompts</span>
+      </button>
+      <button class="nav-item" data-page="achievements" onclick="AKJEE.navigate('achievements')">
+        <span class="nav-icon">🏆</span>
+        <span class="nav-label">Badges</span>
+      </button>
+      <button class="nav-item" data-page="settings" onclick="AKJEE.navigate('settings')">
+        <span class="nav-icon">⚙️</span>
+        <span class="nav-label">Settings</span>
+      </button>
+    </nav>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════
+       GLOBAL MODALS
+  ═══════════════════════════════════════════════════ -->
+  <div id="modal-overlay">
+
+    <!-- Reschedule Modal -->
+    <div class="modal" id="reschedule-modal" style="display:none;">
+      <div class="modal-header">
+        <span class="modal-title">↩️ Reschedule Topic</span>
+        <button class="modal-close" onclick="AKJEE.modal.close()">✕</button>
+      </div>
+      <div class="modal-body">
+        <p style="color:var(--text-secondary); margin-bottom:1rem;" id="reschedule-topic-name">
+          Rescheduling: <strong>—</strong>
+        </p>
+        <div class="form-group">
+          <label class="form-label">Reschedule to:</label>
+          <input type="date" class="form-input" id="reschedule-date">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Reason:</label>
+          <select class="form-select" id="reschedule-reason">
+            <option value="confused">Got confused with the topic</option>
+            <option value="time">Ran out of time</option>
+            <option value="unwell">Felt unwell today</option>
+            <option value="hard">Topic is too hard — need more time</option>
+            <option value="practice">Want more practice first</option>
+            <option value="other">Other reason</option>
+          </select>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-ghost" onclick="AKJEE.modal.close()">Cancel</button>
+        <button class="btn btn-primary" onclick="AKJEE.modal.confirmReschedule()">Reschedule ↩️</button>
+      </div>
+    </div>
+
+    <!-- Level Up Modal -->
+    <div class="modal" id="level-up-modal" style="display:none; text-align:center;">
+      <div class="modal-body" style="padding:2rem;">
+        <span class="level-up-icon">🎉</span>
+        <div class="level-up-title" id="level-up-title">Level Up!</div>
+        <div style="font-size:3rem; font-weight:900; color:var(--gold); margin:0.5rem 0;" id="level-up-num">2</div>
+        <div style="color:var(--text-secondary); margin-bottom:1.5rem;" id="level-up-name">Beginner</div>
+        <button class="btn btn-gold btn-full" onclick="AKJEE.modal.close()">Awesome! 🚀</button>
+      </div>
+    </div>
+
+    <!-- Achievement Modal -->
+    <div class="modal" id="achievement-modal" style="display:none; text-align:center;">
+      <div class="modal-body" style="padding:2rem;">
+        <div style="font-size:4rem; margin-bottom:0.75rem;" id="ach-modal-icon">🎖️</div>
+        <div style="font-size:1.25rem; font-weight:700; color:var(--gold); margin-bottom:0.5rem;" id="ach-modal-name">Achievement Unlocked!</div>
+        <div style="color:var(--text-secondary); margin-bottom:1.5rem;" id="ach-modal-desc">You did something great!</div>
+        <button class="btn btn-gold btn-full" onclick="AKJEE.modal.close()">Claim Reward ⭐</button>
+      </div>
+    </div>
+
+    <!-- Confirm Modal -->
+    <div class="modal" id="confirm-modal" style="display:none;">
+      <div class="modal-header">
+        <span class="modal-title" id="confirm-title">Confirm Action</span>
+        <button class="modal-close" onclick="AKJEE.modal.close()">✕</button>
+      </div>
+      <div class="modal-body">
+        <p style="color:var(--text-secondary);" id="confirm-message">Are you sure?</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-ghost" onclick="AKJEE.modal.close()">Cancel</button>
+        <button class="btn btn-danger" id="confirm-action-btn">Confirm</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- TOAST CONTAINER -->
+  <div id="toast-container"></div>
+
+  <!-- CONFETTI -->
+  <div id="confetti-container"></div>
+
+  <!-- SCRIPTS -->
+  <script src="quizBank.js?v=1.2"></script>
+  <script src="prompts.js?v=1.2"></script>
+  <script src="script.js?v=1.2"></script>
+</body>
+</html>

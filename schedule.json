@@ -1,0 +1,1594 @@
+{
+  "appName": "AKJEE",
+  "version": "1.0",
+  "totalCalendarDays": 62,
+  "totalStudyDays": 44,
+  "startDate": "2026-04-01",
+  "endDate": "2026-06-01",
+  "phases": [
+    {"phase": 1, "name": "Foundation Basics", "dayRange": "1-15", "description": "Building strong fundamentals from NCERT level"},
+    {"phase": 2, "name": "Core Concepts", "dayRange": "16-30", "description": "Deeper understanding and JEE-level concepts"},
+    {"phase": 3, "name": "Problem Solving", "dayRange": "31-44", "description": "Application, practice problems, and speed building"},
+    {"phase": 4, "name": "Revision + Tests", "dayRange": "45-60", "description": "Full revision, mock tests, and final preparation (days 45-60 mapped to study days as schedule extends)"}
+  ],
+  "days": [
+    {
+      "day": 1,
+      "date": "2026-04-01",
+      "weekday": "Wednesday",
+      "isRestDay": false,
+      "phase": 1,
+      "physics": {
+        "topic": "Units & Measurements",
+        "subtopics": ["SI Units and Fundamental Units", "Dimensional Analysis", "Error Analysis — Absolute, Relative, Percentage Error", "Significant Figures", "Rules for rounding off"],
+        "ncertChapter": "Chapter 2",
+        "difficulty": "easy",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["[A] = [M^a L^b T^c]", "Percentage error = (ΔA/A) × 100%"]
+      },
+      "chemistry": {
+        "topic": "Mole Concept",
+        "subtopics": ["Atomic and Molecular Mass", "Mole — Avogadro's Number", "Molar Mass", "n = m/M", "Stoichiometry basics"],
+        "ncertChapter": "Chapter 1",
+        "difficulty": "easy",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["n = m/M", "N = n × Nₐ where Nₐ = 6.022×10²³"]
+      },
+      "math": {
+        "topic": "Sets",
+        "subtopics": ["Types of sets — Empty, Finite, Infinite, Universal", "Subset and Superset", "Power Set", "Venn Diagrams", "Union, Intersection, Difference"],
+        "ncertChapter": "Chapter 1",
+        "difficulty": "easy",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["n(A∪B) = n(A) + n(B) - n(A∩B)", "n(A') = n(U) - n(A)"]
+      },
+      "quiz": {"questionCount": 10, "timeMinutes": 10, "topics": ["Units & Measurements", "Mole Concept", "Sets"]},
+      "test": {"questionCount": 10, "timeMinutes": 15, "topics": ["Day 1 topics"]}
+    },
+    {
+      "day": 2,
+      "date": "2026-04-02",
+      "weekday": "Thursday",
+      "isRestDay": false,
+      "phase": 1,
+      "physics": {
+        "topic": "Vectors",
+        "subtopics": ["Scalar vs Vector quantities", "Vector addition — Triangle and Parallelogram law", "Resolution of vectors", "Unit vectors i, j, k", "Dot product and Cross product"],
+        "ncertChapter": "Chapter 3",
+        "difficulty": "easy",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["A⃗·B⃗ = AB cosθ", "|A⃗×B⃗| = AB sinθ", "R = √(A²+B²+2AB cosθ)"]
+      },
+      "chemistry": {
+        "topic": "Atomic Structure Part 1",
+        "subtopics": ["Thomson model", "Rutherford's experiment and nuclear model", "Bohr's atomic model", "Postulates and energy levels", "Hydrogen spectrum — Lyman, Balmer, Paschen series"],
+        "ncertChapter": "Chapter 2",
+        "difficulty": "easy",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["Eₙ = -13.6/n² eV", "1/λ = R(1/n₁² - 1/n₂²)"]
+      },
+      "math": {
+        "topic": "Relations and Functions",
+        "subtopics": ["Ordered pairs and Cartesian product", "Types of relations — reflexive, symmetric, transitive", "Equivalence relations", "Types of functions — one-one, onto, bijective", "Composition of functions"],
+        "ncertChapter": "Chapter 2",
+        "difficulty": "easy",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["f∘g(x) = f(g(x))", "Domain, Codomain, Range"]
+      },
+      "quiz": {"questionCount": 10, "timeMinutes": 10, "topics": ["Vectors", "Atomic Structure", "Relations and Functions"]},
+      "test": {"questionCount": 10, "timeMinutes": 15, "topics": ["Day 2 topics"]}
+    },
+    {
+      "day": 3,
+      "date": "2026-04-03",
+      "weekday": "Friday",
+      "isRestDay": false,
+      "phase": 1,
+      "physics": {
+        "topic": "Kinematics 1D",
+        "subtopics": ["Distance vs Displacement", "Speed vs Velocity", "Acceleration", "Equations of motion", "Motion under gravity", "Graphs: v-t, s-t, a-t"],
+        "ncertChapter": "Chapter 3",
+        "difficulty": "easy",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["v = u + at", "s = ut + ½at²", "v² = u² + 2as", "s_nth = u + a(2n-1)/2"]
+      },
+      "chemistry": {
+        "topic": "Atomic Structure Part 2",
+        "subtopics": ["Quantum numbers — n, l, m, s", "Aufbau principle", "Hund's rule", "Pauli's exclusion principle", "Electronic configuration of elements"],
+        "ncertChapter": "Chapter 2",
+        "difficulty": "easy",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["Max electrons in shell = 2n²", "Orbitals per subshell: s=1, p=3, d=5, f=7"]
+      },
+      "math": {
+        "topic": "Trigonometric Functions — Basics",
+        "subtopics": ["Degrees and Radians conversion", "Trigonometric ratios for standard angles", "Signs in quadrants — ASTC rule", "Trigonometric identities", "sin²θ + cos²θ = 1 family"],
+        "ncertChapter": "Chapter 3",
+        "difficulty": "easy",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["sin²θ + cos²θ = 1", "1 + tan²θ = sec²θ", "1 + cot²θ = cosec²θ", "π rad = 180°"]
+      },
+      "quiz": {"questionCount": 10, "timeMinutes": 10, "topics": ["Kinematics 1D", "Atomic Structure Part 2", "Trigonometric Basics"]},
+      "test": {"questionCount": 10, "timeMinutes": 15, "topics": ["Day 3 topics"]}
+    },
+    {
+      "day": null,
+      "date": "2026-04-04",
+      "weekday": "Saturday",
+      "isRestDay": true,
+      "message": "Rest Day — Rest is part of learning. Recharge today!"
+    },
+    {
+      "day": null,
+      "date": "2026-04-05",
+      "weekday": "Sunday",
+      "isRestDay": true,
+      "message": "Rest Day — Rest is part of learning. Recharge today!"
+    },
+    {
+      "day": 4,
+      "date": "2026-04-06",
+      "weekday": "Monday",
+      "isRestDay": false,
+      "phase": 1,
+      "physics": {
+        "topic": "2D Motion & Projectile Motion",
+        "subtopics": ["Motion in a plane", "Projectile — horizontal and vertical components", "Time of flight", "Maximum height", "Range formula", "Equation of trajectory"],
+        "ncertChapter": "Chapter 4",
+        "difficulty": "easy",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["T = 2u sinθ/g", "H = u²sin²θ/2g", "R = u²sin2θ/g", "y = x tanθ - gx²/2u²cos²θ"]
+      },
+      "chemistry": {
+        "topic": "Periodic Table Trends",
+        "subtopics": ["s, p, d, f blocks", "Atomic radius trend", "Ionization energy trend", "Electron affinity trend", "Electronegativity — Pauling scale", "Metallic character"],
+        "ncertChapter": "Chapter 3",
+        "difficulty": "easy",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["Atomic radius decreases across period", "IE increases across period"]
+      },
+      "math": {
+        "topic": "Trigonometric Identities",
+        "subtopics": ["Sum and difference formulas", "Double angle formulas", "Half angle formulas", "Product-to-sum formulas", "Sum-to-product formulas"],
+        "ncertChapter": "Chapter 3",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["sin(A+B) = sinA cosB + cosA sinB", "cos2A = 1 - 2sin²A = 2cos²A - 1", "sin2A = 2 sinA cosA"]
+      },
+      "quiz": {"questionCount": 10, "timeMinutes": 10, "topics": ["Projectile Motion", "Periodic Trends", "Trig Identities"]},
+      "test": {"questionCount": 10, "timeMinutes": 15, "topics": ["Day 4 topics"]}
+    },
+    {
+      "day": 5,
+      "date": "2026-04-07",
+      "weekday": "Tuesday",
+      "isRestDay": false,
+      "phase": 1,
+      "physics": {
+        "topic": "Projectile Motion (continued) & Introduction to Relative Motion",
+        "subtopics": ["Projectile on inclined plane", "Angular projection", "River-boat problems intro", "Relative velocity concept", "Relative velocity in 1D"],
+        "ncertChapter": "Chapter 4",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["v_rel = v_A - v_B", "Range on incline = 2u²sin(α-β)cosα / g cos²β"]
+      },
+      "chemistry": {
+        "topic": "Chemical Bonding — Ionic Bonding",
+        "subtopics": ["Ionic bond formation", "Lattice energy and Born-Haber cycle", "Properties of ionic compounds", "Fajan's rules", "Factors affecting ionic bond"],
+        "ncertChapter": "Chapter 4",
+        "difficulty": "easy",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["Lattice energy ∝ charge²/radius", "Born-Haber cycle steps"]
+      },
+      "math": {
+        "topic": "Trigonometric Equations",
+        "subtopics": ["General solutions of sinx=k, cosx=k, tanx=k", "Principal value", "Equations reducible to quadratic form", "Systems of trig equations"],
+        "ncertChapter": "Chapter 3",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["sin x = sin α ⟹ x = nπ + (-1)ⁿα", "cos x = cos α ⟹ x = 2nπ ± α", "tan x = tan α ⟹ x = nπ + α"]
+      },
+      "quiz": {"questionCount": 10, "timeMinutes": 10, "topics": ["Advanced Projectile", "Ionic Bonding", "Trig Equations"]},
+      "test": {"questionCount": 10, "timeMinutes": 15, "topics": ["Day 5 topics"]}
+    },
+    {
+      "day": 6,
+      "date": "2026-04-08",
+      "weekday": "Wednesday",
+      "isRestDay": false,
+      "phase": 1,
+      "physics": {
+        "topic": "Relative Motion",
+        "subtopics": ["Relative velocity in 2D", "River-boat problems", "Rain-man problems", "Minimum distance between two moving bodies", "Collision of two bodies"],
+        "ncertChapter": "Chapter 4",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["v_rel = √(v_A² + v_B² - 2v_Av_B cosθ)", "Drift = (v_river / v_boat) × width"]
+      },
+      "chemistry": {
+        "topic": "Covalent Bonding",
+        "subtopics": ["Lewis structure", "Covalent bond formation", "Sigma and Pi bonds", "Bond length and Bond energy", "Polar and non-polar covalent bonds", "Dipole moment"],
+        "ncertChapter": "Chapter 4",
+        "difficulty": "easy",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["Dipole moment μ = q × d", "Bond order = (bonding - antibonding e⁻)/2"]
+      },
+      "math": {
+        "topic": "Inverse Trigonometry — Introduction",
+        "subtopics": ["Domain and range of inverse trig functions", "Principal values", "sin⁻¹, cos⁻¹, tan⁻¹ graphs", "Basic properties and identities", "sin⁻¹x + cos⁻¹x = π/2"],
+        "ncertChapter": "Chapter 2 (Class 12)",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["sin⁻¹(-x) = -sin⁻¹x", "tan⁻¹x + tan⁻¹y = tan⁻¹((x+y)/(1-xy))", "sin⁻¹x + cos⁻¹x = π/2"]
+      },
+      "quiz": {"questionCount": 10, "timeMinutes": 10, "topics": ["Relative Motion", "Covalent Bonding", "Inverse Trig"]},
+      "test": {"questionCount": 10, "timeMinutes": 15, "topics": ["Day 6 topics"]}
+    },
+    {
+      "day": 7,
+      "date": "2026-04-09",
+      "weekday": "Thursday",
+      "isRestDay": false,
+      "phase": 1,
+      "physics": {
+        "topic": "Circular Motion",
+        "subtopics": ["Angular displacement, velocity, acceleration", "Centripetal acceleration and force", "Non-uniform circular motion", "Banking of roads", "Conical pendulum"],
+        "ncertChapter": "Chapter 5",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["a_c = v²/r = ω²r", "F_c = mv²/r", "tan θ = v²/rg (banking)", "T = 2π√(l cosθ/g) conical pendulum"]
+      },
+      "chemistry": {
+        "topic": "VSEPR Theory & Hybridization",
+        "subtopics": ["VSEPR model and geometries", "Lone pair repulsion effect", "sp, sp², sp³ hybridization", "sp³d, sp³d² hybridization", "Geometry prediction"],
+        "ncertChapter": "Chapter 4",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["Steric number = bonding pairs + lone pairs", "VSEPR geometry table"]
+      },
+      "math": {
+        "topic": "Complex Numbers — Introduction",
+        "subtopics": ["Definition i = √(-1)", "Standard form a + ib", "Real and Imaginary parts", "Equality of complex numbers", "Argand plane", "Modulus and Argument"],
+        "ncertChapter": "Chapter 5",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["i² = -1, i³ = -i, i⁴ = 1", "|z| = √(a²+b²)", "arg(z) = tan⁻¹(b/a)"]
+      },
+      "quiz": {"questionCount": 10, "timeMinutes": 10, "topics": ["Circular Motion", "VSEPR & Hybridization", "Complex Numbers Intro"]},
+      "test": {"questionCount": 10, "timeMinutes": 15, "topics": ["Day 7 topics"]}
+    },
+    {
+      "day": 8,
+      "date": "2026-04-10",
+      "weekday": "Friday",
+      "isRestDay": false,
+      "phase": 1,
+      "physics": {
+        "topic": "Newton's Laws Part 1",
+        "subtopics": ["Newton's 1st Law — Inertia", "Newton's 2nd Law — F = ma", "Newton's 3rd Law — Action-Reaction", "Free body diagrams", "Types of forces — Normal, Tension, Weight"],
+        "ncertChapter": "Chapter 5",
+        "difficulty": "easy",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["F = ma", "W = mg", "For equilibrium: ΣF = 0"]
+      },
+      "chemistry": {
+        "topic": "Molecular Orbital Theory (MOT) & Bond Parameters",
+        "subtopics": ["MOT basics — bonding and antibonding MOs", "Bond order from MOT", "Magnetic properties — paramagnetic vs diamagnetic", "Bond length, Bond energy, Bond angle", "Resonance structures"],
+        "ncertChapter": "Chapter 4",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["Bond order = (Nb - Na)/2", "Higher bond order → shorter bond length, higher bond energy"]
+      },
+      "math": {
+        "topic": "Complex Numbers — Operations",
+        "subtopics": ["Addition, subtraction, multiplication, division", "Conjugate of complex number", "Polar form — r(cosθ + i sinθ)", "De Moivre's theorem", "Cube roots of unity"],
+        "ncertChapter": "Chapter 5",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["z·z̄ = |z|²", "De Moivre: (cosθ + i sinθ)ⁿ = cos nθ + i sin nθ", "1 + ω + ω² = 0"]
+      },
+      "quiz": {"questionCount": 10, "timeMinutes": 10, "topics": ["Newton's Laws 1", "MOT", "Complex Numbers Operations"]},
+      "test": {"questionCount": 10, "timeMinutes": 15, "topics": ["Day 8 topics"]}
+    },
+    {
+      "day": null,
+      "date": "2026-04-11",
+      "weekday": "Saturday",
+      "isRestDay": true,
+      "message": "Rest Day — Rest is part of learning. Recharge today!"
+    },
+    {
+      "day": null,
+      "date": "2026-04-12",
+      "weekday": "Sunday",
+      "isRestDay": true,
+      "message": "Rest Day — Rest is part of learning. Recharge today!"
+    },
+    {
+      "day": 9,
+      "date": "2026-04-13",
+      "weekday": "Monday",
+      "isRestDay": false,
+      "phase": 1,
+      "physics": {
+        "topic": "Newton's Laws Part 2",
+        "subtopics": ["Atwood's machine", "Pulley problems", "Inclined plane — forces and motion", "Connected body problems", "Pseudo force and non-inertial frames"],
+        "ncertChapter": "Chapter 5",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["a = (m₁-m₂)g/(m₁+m₂) Atwood", "For incline: a = g sinθ (frictionless)"]
+      },
+      "chemistry": {
+        "topic": "States of Matter — Gas Laws",
+        "subtopics": ["Boyle's Law — P∝1/V", "Charles' Law — V∝T", "Gay-Lussac's Law — P∝T", "Avogadro's Law", "Combined Gas Law", "Dalton's law of partial pressures"],
+        "ncertChapter": "Chapter 5",
+        "difficulty": "easy",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["P₁V₁/T₁ = P₂V₂/T₂", "P_total = P_A + P_B + P_C", "PV = nRT"]
+      },
+      "math": {
+        "topic": "Quadratic Equations",
+        "subtopics": ["Standard form ax²+bx+c=0", "Discriminant — nature of roots", "Vieta's formulas — sum and product of roots", "Formation of quadratic equation", "Common roots condition"],
+        "ncertChapter": "Chapter 5 (Class 11)",
+        "difficulty": "easy",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["x = (-b ± √(b²-4ac))/2a", "α+β = -b/a", "αβ = c/a", "D = b²-4ac"]
+      },
+      "quiz": {"questionCount": 10, "timeMinutes": 10, "topics": ["Newton's Laws 2", "Gas Laws", "Quadratic Equations"]},
+      "test": {"questionCount": 10, "timeMinutes": 15, "topics": ["Day 9 topics"]}
+    },
+    {
+      "day": 10,
+      "date": "2026-04-14",
+      "weekday": "Tuesday",
+      "isRestDay": false,
+      "phase": 1,
+      "physics": {
+        "topic": "Friction",
+        "subtopics": ["Static and kinetic friction", "Coefficient of friction μ", "Laws of friction", "Angle of friction and angle of repose", "Motion on rough incline"],
+        "ncertChapter": "Chapter 5",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["f_s ≤ μ_s N", "f_k = μ_k N", "tan(angle of repose) = μ", "a = g(sinθ - μcosθ) on rough incline"]
+      },
+      "chemistry": {
+        "topic": "Ideal Gas Equation",
+        "subtopics": ["Ideal gas equation PV = nRT", "Value of R in various units", "Graham's law of diffusion", "Effusion and diffusion", "Molar volume at STP"],
+        "ncertChapter": "Chapter 5",
+        "difficulty": "easy",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["PV = nRT", "r₁/r₂ = √(M₂/M₁) Graham's law", "Molar volume = 22.4 L at STP"]
+      },
+      "math": {
+        "topic": "Nature of Roots & Inequalities",
+        "subtopics": ["Conditions for real, equal, imaginary roots", "Sign of quadratic expression", "Quadratic inequalities", "Wavy curve method", "Absolute value inequalities"],
+        "ncertChapter": "Chapter 6 (Class 11)",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["D>0: real distinct roots", "D=0: equal roots", "D<0: imaginary roots"]
+      },
+      "quiz": {"questionCount": 10, "timeMinutes": 10, "topics": ["Friction", "Ideal Gas", "Quadratic Inequalities"]},
+      "test": {"questionCount": 10, "timeMinutes": 15, "topics": ["Day 10 topics"]}
+    },
+    {
+      "day": 11,
+      "date": "2026-04-15",
+      "weekday": "Wednesday",
+      "isRestDay": false,
+      "phase": 1,
+      "physics": {
+        "topic": "Friction (continued) & Work Energy Power",
+        "subtopics": ["Friction in pulley problems", "Work done by friction", "Definition of work W = F·d cosθ", "Work done by variable force", "Power P = W/t = Fv"],
+        "ncertChapter": "Chapter 6",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["W = F d cosθ", "W = ∫F dx (variable force)", "P = Fv", "1 HP = 746 W"]
+      },
+      "chemistry": {
+        "topic": "Kinetic Theory of Gases",
+        "subtopics": ["Postulates of kinetic theory", "Derivation of PV = (1/3)mnc²", "Root mean square speed", "Average speed", "Most probable speed", "Equipartition of energy"],
+        "ncertChapter": "Chapter 5",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["c_rms = √(3RT/M)", "c_avg = √(8RT/πM)", "c_mp = √(2RT/M)", "KE = (3/2)kT per molecule"]
+      },
+      "math": {
+        "topic": "Sequences — Arithmetic Progression (AP)",
+        "subtopics": ["Definition and general term", "Sum of n terms of AP", "Arithmetic mean", "Properties of AP", "Problems on AP"],
+        "ncertChapter": "Chapter 9",
+        "difficulty": "easy",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["aₙ = a + (n-1)d", "Sₙ = n/2[2a + (n-1)d]", "AM = (a+b)/2"]
+      },
+      "quiz": {"questionCount": 10, "timeMinutes": 10, "topics": ["Work Energy Power", "Kinetic Theory", "AP Sequences"]},
+      "test": {"questionCount": 10, "timeMinutes": 15, "topics": ["Day 11 topics"]}
+    },
+    {
+      "day": 12,
+      "date": "2026-04-16",
+      "weekday": "Thursday",
+      "isRestDay": false,
+      "phase": 1,
+      "physics": {
+        "topic": "Work Energy Theorem & Conservation of Energy",
+        "subtopics": ["Work-energy theorem", "Kinetic energy", "Potential energy — gravitational, spring", "Conservation of mechanical energy", "Spring force problems"],
+        "ncertChapter": "Chapter 6",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["W_net = ΔKE", "KE = ½mv²", "PE = mgh", "PE_spring = ½kx²", "KE + PE = constant"]
+      },
+      "chemistry": {
+        "topic": "Real Gases & Van der Waals Equation",
+        "subtopics": ["Deviation from ideal gas behaviour", "Compressibility factor Z", "Van der Waals equation", "Critical constants", "Liquefaction of gases"],
+        "ncertChapter": "Chapter 5",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["(P + an²/V²)(V - nb) = nRT", "Z = PV/nRT", "T_c = 8a/27Rb", "P_c = a/27b²"]
+      },
+      "math": {
+        "topic": "Sequences — Geometric Progression (GP)",
+        "subtopics": ["Definition and general term of GP", "Sum of n terms", "Sum of infinite GP", "Geometric mean", "AM-GM inequality"],
+        "ncertChapter": "Chapter 9",
+        "difficulty": "easy",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["aₙ = arⁿ⁻¹", "Sₙ = a(rⁿ-1)/(r-1)", "S∞ = a/(1-r) for |r|<1", "GM = √(ab)", "AM ≥ GM"]
+      },
+      "quiz": {"questionCount": 10, "timeMinutes": 10, "topics": ["Conservation of Energy", "Real Gases", "GP Sequences"]},
+      "test": {"questionCount": 10, "timeMinutes": 15, "topics": ["Day 12 topics"]}
+    },
+    {
+      "day": 13,
+      "date": "2026-04-17",
+      "weekday": "Friday",
+      "isRestDay": false,
+      "phase": 1,
+      "physics": {
+        "topic": "Centre of Mass",
+        "subtopics": ["Definition of centre of mass", "COM of uniform bodies", "COM of system of particles", "Motion of COM", "COM frame"],
+        "ncertChapter": "Chapter 7",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["x_cm = (m₁x₁+m₂x₂)/(m₁+m₂)", "v_cm = (m₁v₁+m₂v₂)/(m₁+m₂)", "p_total = M·v_cm"]
+      },
+      "chemistry": {
+        "topic": "Chemical Thermodynamics — Enthalpy",
+        "subtopics": ["System and surroundings", "Internal energy ΔU", "Enthalpy H and ΔH", "Endothermic and exothermic reactions", "Standard enthalpy of formation", "Kirchhoff's law"],
+        "ncertChapter": "Chapter 6",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["ΔH = ΔU + ΔngRT", "ΔH°_rxn = ΣΔH°_f(products) - ΣΔH°_f(reactants)"]
+      },
+      "math": {
+        "topic": "Straight Lines — Equations",
+        "subtopics": ["Slope of a line", "Various forms — slope-intercept, point-slope, two-point, intercept form", "Normal form", "General equation Ax+By+C=0", "Reducing to standard forms"],
+        "ncertChapter": "Chapter 10",
+        "difficulty": "easy",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["y = mx + c", "y - y₁ = m(x - x₁)", "x/a + y/b = 1", "m = (y₂-y₁)/(x₂-x₁)"]
+      },
+      "quiz": {"questionCount": 10, "timeMinutes": 10, "topics": ["Centre of Mass", "Enthalpy", "Straight Lines"]},
+      "test": {"questionCount": 10, "timeMinutes": 15, "topics": ["Day 13 topics"]}
+    },
+    {
+      "day": 14,
+      "date": "2026-04-20",
+      "weekday": "Monday",
+      "isRestDay": false,
+      "phase": 1,
+      "physics": {
+        "topic": "Momentum & Collisions",
+        "subtopics": ["Linear momentum p = mv", "Impulse-momentum theorem", "Conservation of linear momentum", "Elastic collision in 1D", "Inelastic and perfectly inelastic collision", "Coefficient of restitution e"],
+        "ncertChapter": "Chapter 6",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["J = Δp = FΔt", "e = (v₂-v₁)/(u₁-u₂)", "For elastic: KE conserved", "For perfectly inelastic: v_common = (m₁u₁+m₂u₂)/(m₁+m₂)"]
+      },
+      "chemistry": {
+        "topic": "Hess's Law & Bond Enthalpies",
+        "subtopics": ["Hess's law of constant heat summation", "Enthalpy of combustion, neutralization, solution", "Bond dissociation enthalpy", "Resonance energy", "Lattice enthalpy"],
+        "ncertChapter": "Chapter 6",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["ΔH_rxn = ΣBE(reactants) - ΣBE(products)", "Hess's law: ΔH is a state function"]
+      },
+      "math": {
+        "topic": "Angle Between Lines & Distance Formulas",
+        "subtopics": ["Angle between two lines", "Parallel and perpendicular lines conditions", "Distance from a point to a line", "Distance between parallel lines", "Area of triangle"],
+        "ncertChapter": "Chapter 10",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["tan θ = |(m₁-m₂)/(1+m₁m₂)|", "d = |Ax₀+By₀+C|/√(A²+B²)", "Parallel: m₁=m₂", "Perpendicular: m₁m₂=-1"]
+      },
+      "quiz": {"questionCount": 10, "timeMinutes": 10, "topics": ["Collisions", "Hess's Law", "Angle & Distance Lines"]},
+      "test": {"questionCount": 10, "timeMinutes": 15, "topics": ["Day 14 topics"]}
+    },
+    {
+      "day": null,
+      "date": "2026-04-18",
+      "weekday": "Saturday",
+      "isRestDay": true,
+      "message": "Rest Day — Rest is part of learning. Recharge today!"
+    },
+    {
+      "day": null,
+      "date": "2026-04-19",
+      "weekday": "Sunday",
+      "isRestDay": true,
+      "message": "Rest Day — Rest is part of learning. Recharge today!"
+    },
+    {
+      "day": 15,
+      "date": "2026-04-21",
+      "weekday": "Tuesday",
+      "isRestDay": false,
+      "phase": 1,
+      "physics": {
+        "topic": "Momentum & Collisions (continued) — Phase 1 Ends",
+        "subtopics": ["2D collisions", "Oblique elastic collision", "Loss of KE in inelastic collision", "Explosion problems", "Phase 1 revision checklist"],
+        "ncertChapter": "Chapter 6",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["ΔKE_loss = ½·m₁m₂/(m₁+m₂)·(u₁-u₂)²(1-e²)", "For 2D: momentum conserved in x and y separately"]
+      },
+      "chemistry": {
+        "topic": "Entropy & Gibbs Free Energy",
+        "subtopics": ["Second law of thermodynamics", "Entropy S and ΔS", "Spontaneity criteria", "Gibbs free energy G = H - TS", "ΔG = ΔH - TΔS", "ΔG° and equilibrium constant"],
+        "ncertChapter": "Chapter 6",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["ΔG = ΔH - TΔS", "ΔG < 0 → spontaneous", "ΔG° = -RT ln K", "ΔS_universe > 0 for spontaneous"]
+      },
+      "math": {
+        "topic": "Distance Formula & Family of Lines — Phase 1 Ends",
+        "subtopics": ["Foot of perpendicular", "Reflection of a point across a line", "Family of lines through intersection", "Angle bisectors of lines", "Concurrent lines"],
+        "ncertChapter": "Chapter 10",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["Family of lines: L₁ + λL₂ = 0", "Angle bisector equation"]
+      },
+      "quiz": {"questionCount": 15, "timeMinutes": 15, "topics": ["Phase 1 — all topics revision"]},
+      "test": {"questionCount": 20, "timeMinutes": 30, "topics": ["Phase 1 comprehensive test — Physics, Chemistry, Math"]}
+    },
+    {
+      "day": 16,
+      "date": "2026-04-22",
+      "weekday": "Wednesday",
+      "isRestDay": false,
+      "phase": 2,
+      "physics": {
+        "topic": "Rotational Motion — Torque",
+        "subtopics": ["Rigid body rotation", "Torque τ = r × F", "Couple and moment of couple", "Equilibrium of rigid body", "Translational vs rotational equilibrium"],
+        "ncertChapter": "Chapter 7",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["τ = rF sinθ", "Στ = 0 for rotational equilibrium", "τ = Iα"]
+      },
+      "chemistry": {
+        "topic": "Chemical Equilibrium — Le Chatelier's Principle",
+        "subtopics": ["Law of mass action", "Equilibrium constant Kc and Kp", "Relationship Kp = Kc(RT)^Δn", "Le Chatelier's principle", "Effect of concentration, pressure, temperature on equilibrium"],
+        "ncertChapter": "Chapter 7",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["Kc = [C]^c[D]^d / [A]^a[B]^b", "Kp = Kc(RT)^Δng", "Q < K → forward reaction"]
+      },
+      "math": {
+        "topic": "Circles — Standard Equation",
+        "subtopics": ["Standard form (x-h)²+(y-k)²=r²", "General equation x²+y²+2gx+2fy+c=0", "Centre and radius from general form", "Equation from diameter endpoints", "Intercepts on axes"],
+        "ncertChapter": "Chapter 11",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["Centre = (-g,-f)", "r = √(g²+f²-c)", "Diameter form: (x-x₁)(x-x₂)+(y-y₁)(y-y₂)=0"]
+      },
+      "quiz": {"questionCount": 10, "timeMinutes": 10, "topics": ["Torque", "Chemical Equilibrium", "Circles"]},
+      "test": {"questionCount": 10, "timeMinutes": 15, "topics": ["Day 16 topics"]}
+    },
+    {
+      "day": 17,
+      "date": "2026-04-23",
+      "weekday": "Thursday",
+      "isRestDay": false,
+      "phase": 2,
+      "physics": {
+        "topic": "Moment of Inertia (MOI)",
+        "subtopics": ["Definition of MOI", "MOI of standard bodies — rod, ring, disc, sphere, cylinder", "Parallel axis theorem", "Perpendicular axis theorem", "Radius of gyration"],
+        "ncertChapter": "Chapter 7",
+        "difficulty": "hard",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["I = Σmr²", "I = I_cm + Md² (parallel axis)", "I_z = I_x + I_y (perpendicular axis for laminas)", "I_rod = ML²/12 (about CM)", "I_disc = MR²/2"]
+      },
+      "chemistry": {
+        "topic": "Ionic Equilibrium & pH Calculations",
+        "subtopics": ["Arrhenius, Brønsted-Lowry, Lewis acid-base concepts", "Ionization of water, Kw", "pH scale and calculations", "Degree of ionization", "Buffer solutions — Henderson-Hasselbalch"],
+        "ncertChapter": "Chapter 7",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["pH = -log[H⁺]", "Kw = [H⁺][OH⁻] = 10⁻¹⁴ at 25°C", "pH = pKa + log([A⁻]/[HA])"]
+      },
+      "math": {
+        "topic": "Parabola",
+        "subtopics": ["Standard parabolas — y²=4ax, x²=4ay", "Focus, directrix, vertex, axis", "Focal chord and latus rectum", "Parametric form", "Tangent and Normal to parabola"],
+        "ncertChapter": "Chapter 11",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["y²=4ax: focus (a,0), directrix x=-a", "Latus rectum = 4a", "Parametric: (at², 2at)", "Tangent: ty = x + at²"]
+      },
+      "quiz": {"questionCount": 10, "timeMinutes": 10, "topics": ["MOI", "Ionic Equilibrium", "Parabola"]},
+      "test": {"questionCount": 10, "timeMinutes": 15, "topics": ["Day 17 topics"]}
+    },
+    {
+      "day": 18,
+      "date": "2026-04-24",
+      "weekday": "Friday",
+      "isRestDay": false,
+      "phase": 2,
+      "physics": {
+        "topic": "Angular Momentum",
+        "subtopics": ["Angular momentum L = r × p = Iω", "Conservation of angular momentum", "Torque and angular momentum relation τ = dL/dt", "Applications — figure skater, diver", "Angular impulse"],
+        "ncertChapter": "Chapter 7",
+        "difficulty": "hard",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["L = Iω = mvr (for point mass)", "τ = dL/dt", "L = constant when τ_ext = 0", "I₁ω₁ = I₂ω₂"]
+      },
+      "chemistry": {
+        "topic": "Acids, Bases & Ionic Equilibrium (continued)",
+        "subtopics": ["Weak acid and base equilibria", "Ka and Kb", "Hydrolysis of salts", "Solubility product Ksp", "Common ion effect"],
+        "ncertChapter": "Chapter 7",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["Ka × Kb = Kw", "pH of salt hydrolysis", "Ksp = [Aⁿ⁺]^m [Bⁿ⁻]^n"]
+      },
+      "math": {
+        "topic": "Ellipse",
+        "subtopics": ["Standard form x²/a² + y²/b² = 1", "Semi-major and semi-minor axes", "Eccentricity e = c/a", "Focus, directrix, latus rectum", "Parametric form (a cosθ, b sinθ)"],
+        "ncertChapter": "Chapter 11",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["c² = a² - b²", "e = c/a < 1 for ellipse", "Latus rectum = 2b²/a", "Sum of focal radii = 2a"]
+      },
+      "quiz": {"questionCount": 10, "timeMinutes": 10, "topics": ["Angular Momentum", "Acid-Base Equilibria", "Ellipse"]},
+      "test": {"questionCount": 10, "timeMinutes": 15, "topics": ["Day 18 topics"]}
+    },
+    {
+      "day": null,
+      "date": "2026-04-25",
+      "weekday": "Saturday",
+      "isRestDay": true,
+      "message": "Rest Day — Rest is part of learning. Recharge today!"
+    },
+    {
+      "day": null,
+      "date": "2026-04-26",
+      "weekday": "Sunday",
+      "isRestDay": true,
+      "message": "Rest Day — Rest is part of learning. Recharge today!"
+    },
+    {
+      "day": 19,
+      "date": "2026-04-27",
+      "weekday": "Monday",
+      "isRestDay": false,
+      "phase": 2,
+      "physics": {
+        "topic": "Rolling Motion",
+        "subtopics": ["Rolling without slipping condition v = Rω", "Kinetic energy of rolling body", "Rolling on inclined plane — acceleration", "Rolling friction", "Angular velocity and velocity of points on rolling body"],
+        "ncertChapter": "Chapter 7",
+        "difficulty": "hard",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["KE_rolling = ½mv² + ½Iω² = ½mv²(1 + k²/R²)", "a = g sinθ / (1 + k²/R²)", "v_cm = Rω"]
+      },
+      "chemistry": {
+        "topic": "Redox Reactions",
+        "subtopics": ["Oxidation and reduction — electron transfer", "Oxidation number rules", "Balancing redox reactions — oxidation number method", "Ion-electron method (half-reaction method)", "Disproportionation reactions"],
+        "ncertChapter": "Chapter 8",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["Oxidation: loss of electrons", "Reduction: gain of electrons", "Change in oxidation number = change in electrons"]
+      },
+      "math": {
+        "topic": "Hyperbola",
+        "subtopics": ["Standard form x²/a² - y²/b² = 1", "Eccentricity e = c/a > 1", "Asymptotes of hyperbola", "Rectangular hyperbola xy = c²", "Conjugate hyperbola"],
+        "ncertChapter": "Chapter 11",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["c² = a² + b²", "e > 1 for hyperbola", "Asymptotes: y = ±(b/a)x", "Rectangular hyperbola: e = √2"]
+      },
+      "quiz": {"questionCount": 10, "timeMinutes": 10, "topics": ["Rolling Motion", "Redox Reactions", "Hyperbola"]},
+      "test": {"questionCount": 10, "timeMinutes": 15, "topics": ["Day 19 topics"]}
+    },
+    {
+      "day": 20,
+      "date": "2026-04-28",
+      "weekday": "Tuesday",
+      "isRestDay": false,
+      "phase": 2,
+      "physics": {
+        "topic": "Gravitation — Laws & Fields",
+        "subtopics": ["Newton's law of universal gravitation", "Gravitational field g", "Variation of g with altitude, depth, latitude", "Gravitational potential energy", "Gravitational potential"],
+        "ncertChapter": "Chapter 8",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["F = Gm₁m₂/r²", "g = GM/R²", "g_h = g(1 - 2h/R)", "g_d = g(1 - d/R)", "V_grav = -GM/r"]
+      },
+      "chemistry": {
+        "topic": "Acids, Bases (continued) & Introduction to Electrochemistry",
+        "subtopics": ["Electrochemical cells — galvanic and electrolytic", "EMF of cell", "Standard electrode potential", "Nernst equation", "Electrolysis and Faraday's laws"],
+        "ncertChapter": "Chapter 3 (Class 12)",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["E_cell = E_cathode - E_anode", "E = E° - (RT/nF)ln Q (Nernst)", "m = ZIt (Faraday's 1st law)"]
+      },
+      "math": {
+        "topic": "Limits — Definition & Standard Limits",
+        "subtopics": ["Concept of limit", "Left-hand and right-hand limits", "Algebra of limits", "Standard limits — sinx/x, (1+1/n)ⁿ, (xⁿ-aⁿ)/(x-a)", "Limits at infinity"],
+        "ncertChapter": "Chapter 13",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["lim(x→0) sinx/x = 1", "lim(x→0) (1+x)^(1/x) = e", "lim(x→a) (xⁿ-aⁿ)/(x-a) = naⁿ⁻¹"]
+      },
+      "quiz": {"questionCount": 10, "timeMinutes": 10, "topics": ["Gravitation", "Electrochemistry intro", "Limits"]},
+      "test": {"questionCount": 10, "timeMinutes": 15, "topics": ["Day 20 topics"]}
+    },
+    {
+      "day": 21,
+      "date": "2026-04-29",
+      "weekday": "Wednesday",
+      "isRestDay": false,
+      "phase": 2,
+      "physics": {
+        "topic": "Satellites & Escape Velocity",
+        "subtopics": ["Orbital velocity of satellite", "Time period of satellite", "Escape velocity", "Geostationary satellites", "Energy of satellite in orbit"],
+        "ncertChapter": "Chapter 8",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["v_o = √(GM/r)", "T = 2π√(r³/GM)", "v_escape = √(2GM/R) = √(2gR)", "Energy = -GMm/2r"]
+      },
+      "chemistry": {
+        "topic": "Electrochemistry (continued)",
+        "subtopics": ["Conductance and conductivity", "Molar conductivity", "Kohlrausch's law", "Corrosion", "Batteries — primary and secondary"],
+        "ncertChapter": "Chapter 3 (Class 12)",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["Λm = κ/c", "Kohlrausch: Λ°m = λ°+ + λ°-", "ΔG° = -nFE°"]
+      },
+      "math": {
+        "topic": "Standard Limits & Continuity",
+        "subtopics": ["More standard limits", "Continuity of a function", "Types of discontinuity", "Continuity at a point and on an interval", "Intermediate value theorem"],
+        "ncertChapter": "Chapter 13",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["f is continuous at x=a if lim f(x) = f(a)", "lim(x→0) tanx/x = 1", "lim(x→0) (eˣ-1)/x = 1", "lim(x→0) (aˣ-1)/x = ln a"]
+      },
+      "quiz": {"questionCount": 10, "timeMinutes": 10, "topics": ["Satellites", "Electrochemistry", "Continuity"]},
+      "test": {"questionCount": 10, "timeMinutes": 15, "topics": ["Day 21 topics"]}
+    },
+    {
+      "day": 22,
+      "date": "2026-04-30",
+      "weekday": "Thursday",
+      "isRestDay": false,
+      "phase": 2,
+      "physics": {
+        "topic": "Fluid Mechanics",
+        "subtopics": ["Pressure in a fluid", "Pascal's law", "Archimedes' principle and buoyancy", "Continuity equation — A₁v₁ = A₂v₂", "Streamline flow and turbulent flow"],
+        "ncertChapter": "Chapter 10",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["P = P₀ + ρgh", "Buoyant force = ρ_fluid × V_submerged × g", "A₁v₁ = A₂v₂"]
+      },
+      "chemistry": {
+        "topic": "Hydrogen & s-Block Elements",
+        "subtopics": ["Position of hydrogen", "Isotopes of hydrogen", "Properties and uses of hydrogen", "Alkali metals — electronic config, properties", "Alkaline earth metals — reactivity trends"],
+        "ncertChapter": "Chapters 9-10",
+        "difficulty": "easy",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["Diagonal relationship in periodic table", "Flame test colors for group 1 & 2 elements"]
+      },
+      "math": {
+        "topic": "Derivatives — First Principles",
+        "subtopics": ["Definition of derivative as limit", "First principles differentiation", "Derivative of xⁿ, sinx, cosx, eˣ, ln x from first principles", "Differentiability and continuity relationship"],
+        "ncertChapter": "Chapter 13",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["f'(x) = lim(h→0) [f(x+h)-f(x)]/h", "d/dx(xⁿ) = nxⁿ⁻¹", "d/dx(sinx) = cosx"]
+      },
+      "quiz": {"questionCount": 10, "timeMinutes": 10, "topics": ["Fluid Mechanics", "s-Block Elements", "First Principles Differentiation"]},
+      "test": {"questionCount": 10, "timeMinutes": 15, "topics": ["Day 22 topics"]}
+    },
+    {
+      "day": 23,
+      "date": "2026-05-01",
+      "weekday": "Friday",
+      "isRestDay": false,
+      "phase": 2,
+      "physics": {
+        "topic": "Bernoulli's Theorem",
+        "subtopics": ["Bernoulli's equation derivation", "Venturimeter", "Torricelli's theorem — speed of efflux", "Magnus effect", "Applications of Bernoulli's principle"],
+        "ncertChapter": "Chapter 10",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["P + ½ρv² + ρgh = constant", "v_efflux = √(2gh)", "Flow rate Q = Av"]
+      },
+      "chemistry": {
+        "topic": "p-Block Elements Introduction",
+        "subtopics": ["Group 13 — Boron family", "Group 14 — Carbon family", "Allotropes of carbon", "Anomalous behaviour of first member", "Preparation and properties of important compounds"],
+        "ncertChapter": "Chapter 11",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["Inert pair effect in p-block", "Diagonal relationship B-Si"]
+      },
+      "math": {
+        "topic": "Differentiation Rules",
+        "subtopics": ["Sum, difference, product, quotient rules", "Chain rule", "Implicit differentiation", "Parametric differentiation", "Logarithmic differentiation"],
+        "ncertChapter": "Chapter 5 (Class 12)",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["d/dx[f·g] = f'g + fg'", "d/dx[f/g] = (f'g-fg')/g²", "d/dx[f(g(x))] = f'(g(x))·g'(x)"]
+      },
+      "quiz": {"questionCount": 10, "timeMinutes": 10, "topics": ["Bernoulli's Theorem", "p-Block intro", "Differentiation Rules"]},
+      "test": {"questionCount": 10, "timeMinutes": 15, "topics": ["Day 23 topics"]}
+    },
+    {
+      "day": null,
+      "date": "2026-05-02",
+      "weekday": "Saturday",
+      "isRestDay": true,
+      "message": "Rest Day — Rest is part of learning. Recharge today!"
+    },
+    {
+      "day": null,
+      "date": "2026-05-03",
+      "weekday": "Sunday",
+      "isRestDay": true,
+      "message": "Rest Day — Rest is part of learning. Recharge today!"
+    },
+    {
+      "day": 24,
+      "date": "2026-05-04",
+      "weekday": "Monday",
+      "isRestDay": false,
+      "phase": 2,
+      "physics": {
+        "topic": "Simple Harmonic Motion — Introduction",
+        "subtopics": ["Definition of SHM", "Characteristics — restoring force proportional to displacement", "Displacement, velocity, acceleration in SHM", "Energy in SHM", "Phase and epoch"],
+        "ncertChapter": "Chapter 14",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["x = A sin(ωt + φ)", "v = Aω cos(ωt+φ)", "a = -ω²x", "E = ½mω²A²"]
+      },
+      "chemistry": {
+        "topic": "Organic Chemistry — IUPAC Naming",
+        "subtopics": ["Homologous series", "Functional groups", "IUPAC nomenclature rules", "Prefix and suffix for functional groups", "Naming complex molecules"],
+        "ncertChapter": "Chapter 12",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["IUPAC name = prefix + root + suffix", "Longest carbon chain = parent chain"]
+      },
+      "math": {
+        "topic": "Applications of Derivatives — Maxima & Minima",
+        "subtopics": ["Increasing and decreasing functions", "Critical points", "First derivative test", "Second derivative test", "Absolute maxima and minima on closed intervals"],
+        "ncertChapter": "Chapter 6 (Class 12)",
+        "difficulty": "hard",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["f'(x)=0 at critical point", "f''(x)>0 → local min", "f''(x)<0 → local max"]
+      },
+      "quiz": {"questionCount": 10, "timeMinutes": 10, "topics": ["SHM Introduction", "IUPAC Naming", "Maxima Minima"]},
+      "test": {"questionCount": 10, "timeMinutes": 15, "topics": ["Day 24 topics"]}
+    },
+    {
+      "day": 25,
+      "date": "2026-05-05",
+      "weekday": "Tuesday",
+      "isRestDay": false,
+      "phase": 2,
+      "physics": {
+        "topic": "SHM — Equations & Systems",
+        "subtopics": ["Simple pendulum T = 2π√(l/g)", "Spring-mass system T = 2π√(m/k)", "Combination of springs — series and parallel", "Damped and forced oscillations intro", "Resonance"],
+        "ncertChapter": "Chapter 14",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["T_pendulum = 2π√(l/g)", "T_spring = 2π√(m/k)", "Series springs: 1/k_eff = 1/k₁+1/k₂", "Parallel: k_eff = k₁+k₂"]
+      },
+      "chemistry": {
+        "topic": "Isomerism in Organic Chemistry",
+        "subtopics": ["Structural isomerism — chain, position, functional, metamerism, tautomerism", "Stereoisomerism — geometrical (cis-trans) and optical", "Chirality and enantiomers", "R-S configuration basics", "Conformations"],
+        "ncertChapter": "Chapter 12",
+        "difficulty": "hard",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["Optical isomers for n chiral centres = 2ⁿ (max)", "Meso compound — internal plane of symmetry"]
+      },
+      "math": {
+        "topic": "Applications of Derivatives — Rate of Change & Tangents",
+        "subtopics": ["Rate of change of quantities", "Equation of tangent and normal to curve", "Angle of intersection of curves", "Rolle's theorem", "Lagrange's mean value theorem"],
+        "ncertChapter": "Chapter 6 (Class 12)",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["Tangent slope = dy/dx at point", "Normal slope = -dx/dy", "Rolle's: f(a)=f(b) → f'(c)=0", "LMVT: f'(c) = (f(b)-f(a))/(b-a)"]
+      },
+      "quiz": {"questionCount": 10, "timeMinutes": 10, "topics": ["SHM Equations", "Stereoisomerism", "MVT & Tangents"]},
+      "test": {"questionCount": 10, "timeMinutes": 15, "topics": ["Day 25 topics"]}
+    },
+    {
+      "day": 26,
+      "date": "2026-05-06",
+      "weekday": "Wednesday",
+      "isRestDay": false,
+      "phase": 2,
+      "physics": {
+        "topic": "Waves — Introduction & Wave Equation",
+        "subtopics": ["Types of waves — transverse, longitudinal", "Wave equation y = A sin(kx - ωt)", "Wave speed v = fλ", "Superposition principle", "Standing waves — nodes and antinodes"],
+        "ncertChapter": "Chapter 15",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["v = fλ", "k = 2π/λ (wave number)", "ω = 2πf", "v_string = √(T/μ)"]
+      },
+      "chemistry": {
+        "topic": "Hydrocarbons — Alkanes",
+        "subtopics": ["Sources and preparation of alkanes", "Physical properties", "Chemical reactions — halogenation, combustion, nitration, isomerization", "Mechanism of free radical halogenation"],
+        "ncertChapter": "Chapter 13",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["Initiation, Propagation, Termination steps in free radical mechanism"]
+      },
+      "math": {
+        "topic": "Integration — Anti-derivatives",
+        "subtopics": ["Integration as reverse of differentiation", "Standard integrals", "Integration of 1/x, eˣ, sinx, cosx, xⁿ", "Constant of integration", "Properties of indefinite integrals"],
+        "ncertChapter": "Chapter 7 (Class 12)",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["∫xⁿ dx = xⁿ⁺¹/(n+1) + C", "∫sinx dx = -cosx + C", "∫eˣ dx = eˣ + C", "∫1/x dx = ln|x| + C"]
+      },
+      "quiz": {"questionCount": 10, "timeMinutes": 10, "topics": ["Wave Equation", "Alkanes", "Anti-derivatives"]},
+      "test": {"questionCount": 10, "timeMinutes": 15, "topics": ["Day 26 topics"]}
+    },
+    {
+      "day": 27,
+      "date": "2026-05-07",
+      "weekday": "Thursday",
+      "isRestDay": false,
+      "phase": 2,
+      "physics": {
+        "topic": "Sound Waves",
+        "subtopics": ["Speed of sound in different media", "Intensity and loudness — decibel scale", "Vibrations in strings — harmonics and overtones", "Vibrations in organ pipes — open and closed", "Beats phenomenon"],
+        "ncertChapter": "Chapter 15",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["v_sound = √(γP/ρ)", "L_n = nλ/2 (string)", "f_beats = |f₁ - f₂|", "Closed pipe: f_n = (2n-1)v/4L"]
+      },
+      "chemistry": {
+        "topic": "Hydrocarbons — Alkenes",
+        "subtopics": ["Structure and nomenclature", "Preparation — dehydration, dehydrohalogenation", "Addition reactions — HX, H₂O, H₂, halogens", "Markovnikov's rule", "Anti-Markovnikov (peroxide effect)"],
+        "ncertChapter": "Chapter 13",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["Markovnikov: H adds to C with more H", "Carbocation stability: 3°>2°>1°>CH₃⁺"]
+      },
+      "math": {
+        "topic": "Integration by Substitution",
+        "subtopics": ["Method of substitution", "Trigonometric substitutions", "Integration of f'(x)/f(x) form", "Integration of [f(x)]ⁿ f'(x) form", "Inverse trig integrals"],
+        "ncertChapter": "Chapter 7 (Class 12)",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["∫f(g(x))g'(x)dx = F(g(x))+C", "∫1/(1+x²) dx = tan⁻¹x + C", "∫1/√(1-x²) dx = sin⁻¹x + C"]
+      },
+      "quiz": {"questionCount": 10, "timeMinutes": 10, "topics": ["Sound Waves", "Alkenes", "Integration by Substitution"]},
+      "test": {"questionCount": 10, "timeMinutes": 15, "topics": ["Day 27 topics"]}
+    },
+    {
+      "day": 28,
+      "date": "2026-05-08",
+      "weekday": "Friday",
+      "isRestDay": false,
+      "phase": 2,
+      "physics": {
+        "topic": "Doppler Effect",
+        "subtopics": ["Doppler effect in sound", "Apparent frequency formula", "Cases — source moving, observer moving, both moving", "Doppler effect in light (qualitative)", "Applications — radar, SONAR"],
+        "ncertChapter": "Chapter 15",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["f' = f(v ± v_o)/(v ∓ v_s)", "Blueshift when approaching, redshift when receding"]
+      },
+      "chemistry": {
+        "topic": "Alkynes & Aromatic Chemistry Introduction",
+        "subtopics": ["Structure and nomenclature of alkynes", "Reactions of alkynes", "Benzene — Kekulé structure, resonance", "Aromaticity — Hückel's rule 4n+2", "Electrophilic aromatic substitution mechanism"],
+        "ncertChapter": "Chapter 13",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["Hückel rule: (4n+2)π electrons for aromaticity", "EAS: nitration, sulfonation, halogenation, Friedel-Crafts"]
+      },
+      "math": {
+        "topic": "Integration by Parts & Definite Integrals",
+        "subtopics": ["Integration by parts formula", "ILATE rule", "Definite integral as limit of sum", "Properties of definite integrals", "Fundamental theorem of calculus"],
+        "ncertChapter": "Chapter 7 (Class 12)",
+        "difficulty": "hard",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["∫u dv = uv - ∫v du", "∫₀ᵃ f(x)dx = ∫₀ᵃ f(a-x)dx", "FTC: d/dx ∫ₐˣ f(t)dt = f(x)"]
+      },
+      "quiz": {"questionCount": 10, "timeMinutes": 10, "topics": ["Doppler Effect", "Alkynes & Benzene", "Integration by Parts"]},
+      "test": {"questionCount": 10, "timeMinutes": 15, "topics": ["Day 28 topics"]}
+    },
+    {
+      "day": null,
+      "date": "2026-05-09",
+      "weekday": "Saturday",
+      "isRestDay": true,
+      "message": "Rest Day — Rest is part of learning. Recharge today!"
+    },
+    {
+      "day": null,
+      "date": "2026-05-10",
+      "weekday": "Sunday",
+      "isRestDay": true,
+      "message": "Rest Day — Rest is part of learning. Recharge today!"
+    },
+    {
+      "day": 29,
+      "date": "2026-05-11",
+      "weekday": "Monday",
+      "isRestDay": false,
+      "phase": 2,
+      "physics": {
+        "topic": "Thermal Properties of Matter",
+        "subtopics": ["Temperature scales — Celsius, Kelvin, Fahrenheit", "Thermal expansion — linear, area, volume", "Specific heat capacity", "Calorimetry", "Change of state — latent heat"],
+        "ncertChapter": "Chapter 11",
+        "difficulty": "easy",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["ΔL = L₀αΔT", "Q = mcΔT", "Q = mL (latent heat)", "K = C + 273.15"]
+      },
+      "chemistry": {
+        "topic": "Haloalkanes & Haloarenes",
+        "subtopics": ["Classification and nomenclature", "Methods of preparation", "Physical properties", "Nucleophilic substitution — SN1 and SN2", "Stereochemistry of SN reactions"],
+        "ncertChapter": "Chapter 10 (Class 12)",
+        "difficulty": "hard",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["SN2: inversion of configuration (Walden inversion)", "SN1: racemization", "SN1: 3°>2°>1°; SN2: 1°>2°>3°"]
+      },
+      "math": {
+        "topic": "Definite Integrals — Properties & Applications",
+        "subtopics": ["King's property", "Half property", "Area under curve", "Area between two curves", "Volumes of revolution (intro)"],
+        "ncertChapter": "Chapter 8 (Class 12)",
+        "difficulty": "hard",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["∫₀²ᵃ f(x)dx = 2∫₀ᵃ f(x)dx if f(2a-x)=f(x)", "Area = ∫ₐᵇ |f(x)| dx"]
+      },
+      "quiz": {"questionCount": 10, "timeMinutes": 10, "topics": ["Thermal Properties", "Haloalkanes SN reactions", "Definite Integrals Applications"]},
+      "test": {"questionCount": 10, "timeMinutes": 15, "topics": ["Day 29 topics"]}
+    },
+    {
+      "day": 30,
+      "date": "2026-05-12",
+      "weekday": "Tuesday",
+      "isRestDay": false,
+      "phase": 2,
+      "physics": {
+        "topic": "Phase 2 Revision — Rotation, Gravitation, Waves",
+        "subtopics": ["Torque and MOI revision", "Satellite and orbital mechanics", "SHM — key equations and graphs", "Wave properties and Doppler", "Problem-solving on all Phase 2 topics"],
+        "ncertChapter": "Chapters 7, 8, 14, 15",
+        "difficulty": "hard",
+        "estimatedTime": "90 min",
+        "keyFormulas": ["All Phase 2 formulae — self-compiled revision sheet"]
+      },
+      "chemistry": {
+        "topic": "Phase 2 Revision — Equilibrium, Thermodynamics, Organic basics",
+        "subtopics": ["Kc, Kp, Le Chatelier's revision", "ΔG, ΔH, ΔS relationships", "Redox and electrochemistry key points", "Organic mechanisms recap — SN1, SN2, Markovnikov", "PYQ-style numericals"],
+        "ncertChapter": "Chapters 6, 7, 8, 10-13",
+        "difficulty": "hard",
+        "estimatedTime": "90 min",
+        "keyFormulas": ["All Phase 2 formulae — self-compiled revision sheet"]
+      },
+      "math": {
+        "topic": "Phase 2 Revision — Conics, Limits, Calculus Basics (Phase 2 Ends)",
+        "subtopics": ["Conic sections — circle, parabola, ellipse, hyperbola", "Limits and continuity", "Derivatives — all rules", "Integration — substitution, by parts", "Phase 2 comprehensive practice"],
+        "ncertChapter": "Chapters 11, 13 (Class 11), 5-8 (Class 12)",
+        "difficulty": "hard",
+        "estimatedTime": "90 min",
+        "keyFormulas": ["All Phase 2 formulae — self-compiled revision sheet"]
+      },
+      "quiz": {"questionCount": 20, "timeMinutes": 20, "topics": ["Phase 2 comprehensive — all subjects"]},
+      "test": {"questionCount": 30, "timeMinutes": 45, "topics": ["Phase 2 full mock — Physics, Chemistry, Math"]}
+    },
+    {
+      "day": 31,
+      "date": "2026-05-13",
+      "weekday": "Wednesday",
+      "isRestDay": false,
+      "phase": 3,
+      "physics": {
+        "topic": "Thermal Properties & Heat Transfer",
+        "subtopics": ["Conduction — Fourier's law", "Convection", "Radiation — Stefan's law, Wien's law", "Newton's law of cooling", "Blackbody radiation"],
+        "ncertChapter": "Chapter 11",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["H = kA(T₁-T₂)/L (conduction)", "P = σAT⁴ (Stefan's law)", "Wien: λ_max T = constant = 2.9×10⁻³ m·K"]
+      },
+      "chemistry": {
+        "topic": "Alcohols, Phenols & Ethers",
+        "subtopics": ["Classification and nomenclature", "Preparation of alcohols — hydration, reduction", "Chemical reactions — dehydration, oxidation, esterification", "Phenol acidity and reactions", "Williamson's synthesis for ethers"],
+        "ncertChapter": "Chapter 11 (Class 12)",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["Acidity: phenol > alcohol", "Lucas test for 1°, 2°, 3° alcohols", "Victor Meyer's test"]
+      },
+      "math": {
+        "topic": "Permutations",
+        "subtopics": ["Fundamental counting principle", "Factorial", "Permutations nPr", "Arrangements with repetition", "Circular permutations", "Arrangements with identical elements"],
+        "ncertChapter": "Chapter 7 (Class 11)",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["nPr = n!/(n-r)!", "Circular arrangements = (n-1)!", "With identical: n!/p!q!r!"]
+      },
+      "quiz": {"questionCount": 10, "timeMinutes": 10, "topics": ["Heat Transfer", "Alcohols Phenols", "Permutations"]},
+      "test": {"questionCount": 10, "timeMinutes": 15, "topics": ["Day 31 topics"]}
+    },
+    {
+      "day": 32,
+      "date": "2026-05-14",
+      "weekday": "Thursday",
+      "isRestDay": false,
+      "phase": 3,
+      "physics": {
+        "topic": "Thermodynamics — Laws 1 & 2",
+        "subtopics": ["First law of thermodynamics ΔU = Q - W", "Work done by gas in various processes", "Specific heat capacities Cp, Cv", "Relation Cp - Cv = R", "Second law — Carnot engine, efficiency"],
+        "ncertChapter": "Chapter 12",
+        "difficulty": "hard",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["ΔU = Q - W", "Cp - Cv = R", "η = 1 - T_cold/T_hot (Carnot)", "γ = Cp/Cv"]
+      },
+      "chemistry": {
+        "topic": "Aldehydes & Ketones",
+        "subtopics": ["Nomenclature and structure", "Preparation — oxidation, ozonolysis, Gattermann-Koch", "Nucleophilic addition reactions", "Aldol condensation", "Cannizzaro reaction"],
+        "ncertChapter": "Chapter 12 (Class 12)",
+        "difficulty": "hard",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["Aldol: base + 2 carbonyl → β-hydroxy carbonyl", "Cannizzaro: no α-H aldehydes → disproportionation"]
+      },
+      "math": {
+        "topic": "Combinations",
+        "subtopics": ["Combinations nCr", "Properties of combinations", "Selections with and without repetition", "Committee problems", "Distributing objects"],
+        "ncertChapter": "Chapter 7 (Class 11)",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["nCr = n!/(r!(n-r)!)", "nCr = nC(n-r)", "nCr + nC(r-1) = (n+1)Cr", "Sum: 2ⁿ = ΣnCr"]
+      },
+      "quiz": {"questionCount": 10, "timeMinutes": 10, "topics": ["Thermodynamics Laws", "Aldehydes Ketones", "Combinations"]},
+      "test": {"questionCount": 10, "timeMinutes": 15, "topics": ["Day 32 topics"]}
+    },
+    {
+      "day": 33,
+      "date": "2026-05-15",
+      "weekday": "Friday",
+      "isRestDay": false,
+      "phase": 3,
+      "physics": {
+        "topic": "Thermodynamic Processes",
+        "subtopics": ["Isothermal process", "Adiabatic process", "Isochoric and isobaric processes", "PV diagrams", "Work done in each process"],
+        "ncertChapter": "Chapter 12",
+        "difficulty": "hard",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["Isothermal: W = nRT ln(V₂/V₁)", "Adiabatic: PVᵞ = constant, W = (P₁V₁-P₂V₂)/(γ-1)", "Isobaric: W = PΔV"]
+      },
+      "chemistry": {
+        "topic": "Carboxylic Acids & Derivatives",
+        "subtopics": ["Nomenclature and structure", "Preparation methods", "Acidity of carboxylic acids — effect of substituents", "Reactions — reduction, decarboxylation, esterification", "Acid derivatives: esters, anhydrides, amides"],
+        "ncertChapter": "Chapter 12 (Class 12)",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["pKa: lower pKa = stronger acid", "EWG increases acidity, EDG decreases acidity"]
+      },
+      "math": {
+        "topic": "Binomial Theorem",
+        "subtopics": ["Binomial theorem for positive integer n", "General term T(r+1)", "Middle term", "Coefficient of xⁿ", "Properties of binomial coefficients"],
+        "ncertChapter": "Chapter 8 (Class 11)",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["(a+b)ⁿ = ΣnCr aⁿ⁻ʳ bʳ", "T(r+1) = nCr aⁿ⁻ʳ bʳ", "Σ nCr = 2ⁿ"]
+      },
+      "quiz": {"questionCount": 10, "timeMinutes": 10, "topics": ["Thermodynamic Processes", "Carboxylic Acids", "Binomial Theorem"]},
+      "test": {"questionCount": 10, "timeMinutes": 15, "topics": ["Day 33 topics"]}
+    },
+    {
+      "day": null,
+      "date": "2026-05-16",
+      "weekday": "Saturday",
+      "isRestDay": true,
+      "message": "Rest Day — Rest is part of learning. Recharge today!"
+    },
+    {
+      "day": null,
+      "date": "2026-05-17",
+      "weekday": "Sunday",
+      "isRestDay": true,
+      "message": "Rest Day — Rest is part of learning. Recharge today!"
+    },
+    {
+      "day": 34,
+      "date": "2026-05-18",
+      "weekday": "Monday",
+      "isRestDay": false,
+      "phase": 3,
+      "physics": {
+        "topic": "Kinetic Theory of Gases (Physics)",
+        "subtopics": ["Mean free path", "Degrees of freedom", "Law of equipartition of energy", "Specific heat of gases using equipartition", "Monoatomic, diatomic, polyatomic gases"],
+        "ncertChapter": "Chapter 13",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["U = (f/2)nRT", "Cv = (f/2)R", "γ = 1 + 2/f", "Monoatomic: f=3, γ=5/3; Diatomic: f=5, γ=7/5"]
+      },
+      "chemistry": {
+        "topic": "Amines",
+        "subtopics": ["Classification — primary, secondary, tertiary", "Nomenclature", "Preparation — reduction, Gabriel synthesis", "Basic nature and comparison", "Reactions — acylation, diazotization"],
+        "ncertChapter": "Chapter 13 (Class 12)",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["Basicity: 2° > 1° > 3° > NH₃ (in gas phase)", "Diazotization: ArNH₂ + NaNO₂ + HCl → ArN₂⁺Cl⁻"]
+      },
+      "math": {
+        "topic": "Statistics — Mean, Variance, Standard Deviation",
+        "subtopics": ["Mean of ungrouped and grouped data", "Variance formula", "Standard deviation", "Coefficient of variation", "Mean deviation about mean and median"],
+        "ncertChapter": "Chapter 15 (Class 11)",
+        "difficulty": "easy",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["σ² = Σf(xᵢ-x̄)²/n", "σ = √(σ²)", "CV = (σ/x̄)×100%"]
+      },
+      "quiz": {"questionCount": 10, "timeMinutes": 10, "topics": ["Kinetic Theory", "Amines", "Statistics"]},
+      "test": {"questionCount": 10, "timeMinutes": 15, "topics": ["Day 34 topics"]}
+    },
+    {
+      "day": 35,
+      "date": "2026-05-19",
+      "weekday": "Tuesday",
+      "isRestDay": false,
+      "phase": 3,
+      "physics": {
+        "topic": "Elasticity",
+        "subtopics": ["Stress and strain", "Hooke's law", "Young's modulus, Bulk modulus, Shear modulus", "Elastic potential energy", "Poisson's ratio"],
+        "ncertChapter": "Chapter 9",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["Y = Stress/Strain = (F/A)/(ΔL/L)", "K = -V(ΔP/ΔV)", "Elastic PE = ½ × Stress × Strain × Volume"]
+      },
+      "chemistry": {
+        "topic": "Biomolecules",
+        "subtopics": ["Carbohydrates — monosaccharides, disaccharides, polysaccharides", "Proteins — amino acids, peptide bond, levels of structure", "Enzymes", "Nucleic acids — DNA and RNA structure", "Vitamins and hormones intro"],
+        "ncertChapter": "Chapter 14 (Class 12)",
+        "difficulty": "easy",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["Glucose: C₆H₁₂O₆", "Peptide bond: -CO-NH-", "DNA: A-T, G-C base pairing"]
+      },
+      "math": {
+        "topic": "Probability — Classical Definition",
+        "subtopics": ["Sample space and events", "Classical probability", "Complementary events", "Mutually exclusive events", "Equally likely outcomes"],
+        "ncertChapter": "Chapter 16 (Class 11)",
+        "difficulty": "easy",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["P(A) = n(A)/n(S)", "P(A') = 1 - P(A)", "0 ≤ P(A) ≤ 1"]
+      },
+      "quiz": {"questionCount": 10, "timeMinutes": 10, "topics": ["Elasticity", "Biomolecules", "Classical Probability"]},
+      "test": {"questionCount": 10, "timeMinutes": 15, "topics": ["Day 35 topics"]}
+    },
+    {
+      "day": 36,
+      "date": "2026-05-20",
+      "weekday": "Wednesday",
+      "isRestDay": false,
+      "phase": 3,
+      "physics": {
+        "topic": "Surface Tension & Capillarity",
+        "subtopics": ["Surface tension definition", "Angle of contact", "Excess pressure in drops and bubbles", "Capillary rise formula", "Applications of surface tension"],
+        "ncertChapter": "Chapter 10",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["P_excess = 2T/r (drop)", "P_excess = 4T/r (bubble)", "h = 2T cosθ / ρrg (capillary rise)"]
+      },
+      "chemistry": {
+        "topic": "Polymers",
+        "subtopics": ["Classification of polymers — natural, synthetic, addition, condensation", "Polymerisation mechanisms", "Important polymers — PE, PVC, nylon, terylene, bakelite", "Biodegradable polymers", "Rubber and vulcanisation"],
+        "ncertChapter": "Chapter 15 (Class 12)",
+        "difficulty": "easy",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["Addition polymer: no by-product", "Condensation polymer: releases small molecule (water)"]
+      },
+      "math": {
+        "topic": "Probability — Addition Theorem",
+        "subtopics": ["Addition rule: P(A∪B) = P(A)+P(B)-P(A∩B)", "Mutually exclusive events", "Impossible and certain events", "Odds in favour and against", "Problems on card, dice, coin"],
+        "ncertChapter": "Chapter 16 (Class 11)",
+        "difficulty": "easy",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["P(A∪B) = P(A)+P(B)-P(A∩B)", "P(A∪B) = P(A)+P(B) if mutually exclusive"]
+      },
+      "quiz": {"questionCount": 10, "timeMinutes": 10, "topics": ["Surface Tension", "Polymers", "Addition Probability"]},
+      "test": {"questionCount": 10, "timeMinutes": 15, "topics": ["Day 36 topics"]}
+    },
+    {
+      "day": 37,
+      "date": "2026-05-21",
+      "weekday": "Thursday",
+      "isRestDay": false,
+      "phase": 3,
+      "physics": {
+        "topic": "Oscillations Revision & Wave Optics Introduction",
+        "subtopics": ["SHM revision — types, formulae", "Damped oscillations qualitative", "Wave optics — Huygens' principle", "Interference — constructive and destructive", "Young's double slit experiment"],
+        "ncertChapter": "Chapters 14-15",
+        "difficulty": "hard",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["β = λD/d (fringe width)", "Condition: constructive Δ = nλ, destructive Δ = (2n-1)λ/2"]
+      },
+      "chemistry": {
+        "topic": "Environmental Chemistry",
+        "subtopics": ["Atmospheric pollution — air pollutants", "Greenhouse effect and global warming", "Ozone layer depletion", "Water pollution", "Soil pollution and green chemistry"],
+        "ncertChapter": "Chapter 16 (Class 12)",
+        "difficulty": "easy",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["BOD: biological oxygen demand", "Dobson unit for ozone measurement"]
+      },
+      "math": {
+        "topic": "Conditional Probability",
+        "subtopics": ["Conditional probability P(A|B)", "Multiplication theorem", "Independent events", "Total probability theorem", "Bayes' theorem"],
+        "ncertChapter": "Chapter 13 (Class 12)",
+        "difficulty": "hard",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["P(A|B) = P(A∩B)/P(B)", "P(A∩B) = P(A)P(B|A)", "Bayes: P(Aᵢ|B) = P(Aᵢ)P(B|Aᵢ)/ΣP(Aⱼ)P(B|Aⱼ)"]
+      },
+      "quiz": {"questionCount": 10, "timeMinutes": 10, "topics": ["Wave Optics", "Environmental Chemistry", "Conditional Probability"]},
+      "test": {"questionCount": 10, "timeMinutes": 15, "topics": ["Day 37 topics"]}
+    },
+    {
+      "day": 38,
+      "date": "2026-05-22",
+      "weekday": "Friday",
+      "isRestDay": false,
+      "phase": 3,
+      "physics": {
+        "topic": "Ray Optics Introduction",
+        "subtopics": ["Reflection — laws, plane mirror, spherical mirrors", "Mirror formula and magnification", "Refraction — Snell's law", "Critical angle and total internal reflection", "Optical fibre"],
+        "ncertChapter": "Chapter 9 (Class 12)",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["1/v + 1/u = 1/f (mirror)", "m = -v/u", "n₁ sinθ₁ = n₂ sinθ₂", "sin C = 1/n (critical angle)"]
+      },
+      "chemistry": {
+        "topic": "Analytical Chemistry & Coordination Compounds Introduction",
+        "subtopics": ["Qualitative analysis — cation and anion tests", "Coordination compounds — Werner's theory", "Ligands and coordination number", "IUPAC nomenclature of coordination compounds", "Isomerism in coordination compounds"],
+        "ncertChapter": "Chapter 9 (Class 12)",
+        "difficulty": "hard",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["EAN = atomic number - oxidation state + 2×coordination number", "Charge balance in coordination compounds"]
+      },
+      "math": {
+        "topic": "Matrices — Types & Operations",
+        "subtopics": ["Types — row, column, square, diagonal, identity, zero", "Matrix addition and subtraction", "Scalar multiplication", "Matrix multiplication", "Transpose"],
+        "ncertChapter": "Chapter 3 (Class 12)",
+        "difficulty": "easy",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["(AB)ᵀ = BᵀAᵀ", "(AB)C = A(BC)", "AI = IA = A", "m×n × n×p = m×p matrix"]
+      },
+      "quiz": {"questionCount": 10, "timeMinutes": 10, "topics": ["Ray Optics", "Coordination Compounds", "Matrices"]},
+      "test": {"questionCount": 10, "timeMinutes": 15, "topics": ["Day 38 topics"]}
+    },
+    {
+      "day": null,
+      "date": "2026-05-23",
+      "weekday": "Saturday",
+      "isRestDay": true,
+      "message": "Rest Day — Rest is part of learning. Recharge today!"
+    },
+    {
+      "day": null,
+      "date": "2026-05-24",
+      "weekday": "Sunday",
+      "isRestDay": true,
+      "message": "Rest Day — Rest is part of learning. Recharge today!"
+    },
+    {
+      "day": 39,
+      "date": "2026-05-25",
+      "weekday": "Monday",
+      "isRestDay": false,
+      "phase": 3,
+      "physics": {
+        "topic": "Electrostatics — Coulomb's Law & Electric Field",
+        "subtopics": ["Coulomb's law", "Electric field E due to point charge", "Superposition principle", "Electric field lines", "Electric field of continuous charge distribution — rod, ring, disc"],
+        "ncertChapter": "Chapter 1 (Class 12)",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["F = kq₁q₂/r²", "E = kq/r²", "k = 9×10⁹ N m²/C²", "E_ring = kQx/(x²+R²)^(3/2)"]
+      },
+      "chemistry": {
+        "topic": "d-Block Elements (Transition Metals)",
+        "subtopics": ["General electronic configuration", "Variable oxidation states", "Colour of transition metal compounds", "Magnetic properties", "Important compounds — KMnO₄, K₂Cr₂O₇"],
+        "ncertChapter": "Chapter 8 (Class 12)",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["KMnO₄ in acidic: MnO₄⁻ → Mn²⁺", "K₂Cr₂O₇ in acidic: Cr₂O₇²⁻ → 2Cr³⁺"]
+      },
+      "math": {
+        "topic": "Determinants — Properties & Evaluation",
+        "subtopics": ["Determinant of 2×2 and 3×3 matrix", "Properties — row/column operations", "Cofactors and minors", "Expansion along any row/column", "Singular matrix condition"],
+        "ncertChapter": "Chapter 4 (Class 12)",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["|AB| = |A||B|", "|Aᵀ| = |A|", "Singular if det = 0", "Expansion: a₁₁C₁₁ + a₁₂C₁₂ + a₁₃C₁₃"]
+      },
+      "quiz": {"questionCount": 10, "timeMinutes": 10, "topics": ["Electrostatics", "d-Block Elements", "Determinants"]},
+      "test": {"questionCount": 10, "timeMinutes": 15, "topics": ["Day 39 topics"]}
+    },
+    {
+      "day": 40,
+      "date": "2026-05-26",
+      "weekday": "Tuesday",
+      "isRestDay": false,
+      "phase": 3,
+      "physics": {
+        "topic": "Electric Potential & Gauss's Law",
+        "subtopics": ["Electric potential V = kq/r", "Potential due to dipole", "Potential energy of system of charges", "Gauss's law and its applications", "Electric field inside and outside conductors"],
+        "ncertChapter": "Chapter 2 (Class 12)",
+        "difficulty": "hard",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["V = kq/r", "U = kq₁q₂/r", "∮E·dA = Q_enclosed/ε₀ (Gauss's law)", "E = 0 inside conductor"]
+      },
+      "chemistry": {
+        "topic": "f-Block Elements & Surface Chemistry",
+        "subtopics": ["Lanthanides and actinides — general properties", "Lanthanide contraction", "Adsorption — physisorption vs chemisorption", "Colloids — types and properties", "Catalysis — homogeneous and heterogeneous"],
+        "ncertChapter": "Chapters 7-8 (Class 12)",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["Freundlich adsorption: x/m = kP^(1/n)", "Tyndall effect — colloidal particles"]
+      },
+      "math": {
+        "topic": "Cramer's Rule & Inverse of Matrix",
+        "subtopics": ["Adjoint of matrix", "Inverse of a matrix A⁻¹ = adj(A)/det(A)", "Solving linear equations using matrix method", "Cramer's rule for 2 and 3 variables", "Consistency of system of equations"],
+        "ncertChapter": "Chapter 4 (Class 12)",
+        "difficulty": "hard",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["A⁻¹ = adj(A)/|A|", "x = Dx/D, y = Dy/D, z = Dz/D (Cramer's)"]
+      },
+      "quiz": {"questionCount": 10, "timeMinutes": 10, "topics": ["Electric Potential", "f-Block & Surface Chemistry", "Cramer's Rule"]},
+      "test": {"questionCount": 10, "timeMinutes": 15, "topics": ["Day 40 topics"]}
+    },
+    {
+      "day": 41,
+      "date": "2026-05-27",
+      "weekday": "Wednesday",
+      "isRestDay": false,
+      "phase": 3,
+      "physics": {
+        "topic": "Capacitors & Dielectrics",
+        "subtopics": ["Capacitance definition C = Q/V", "Parallel plate capacitor", "Capacitors in series and parallel", "Energy stored in capacitor", "Dielectric — effect on capacitance"],
+        "ncertChapter": "Chapter 2 (Class 12)",
+        "difficulty": "hard",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["C = ε₀A/d", "Series: 1/C = 1/C₁+1/C₂", "Parallel: C = C₁+C₂", "U = ½CV² = Q²/2C", "C_dielectric = κε₀A/d"]
+      },
+      "chemistry": {
+        "topic": "Revision — Inorganic Chemistry Key Topics",
+        "subtopics": ["s-block and p-block key reactions", "d-block important compounds and reactions", "Coordination compounds — naming and isomerism", "Qualitative analysis scheme", "Chemical tests for functional groups"],
+        "ncertChapter": "Chapters 7-11 (Class 12)",
+        "difficulty": "hard",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["All important inorganic reactions compiled"]
+      },
+      "math": {
+        "topic": "Vector Algebra (3D)",
+        "subtopics": ["Position vector in 3D", "Direction cosines and direction ratios", "Dot product and cross product in 3D", "Projection of a vector", "Scalar triple product"],
+        "ncertChapter": "Chapter 10 (Class 12)",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["l²+m²+n²=1 (direction cosines)", "a⃗·b⃗ = |a||b|cosθ", "|a⃗×b⃗| = |a||b|sinθ", "Scalar triple product = [a b c]"]
+      },
+      "quiz": {"questionCount": 10, "timeMinutes": 10, "topics": ["Capacitors", "Inorganic Revision", "Vector Algebra 3D"]},
+      "test": {"questionCount": 10, "timeMinutes": 15, "topics": ["Day 41 topics"]}
+    },
+    {
+      "day": 42,
+      "date": "2026-05-28",
+      "weekday": "Thursday",
+      "isRestDay": false,
+      "phase": 3,
+      "physics": {
+        "topic": "Current Electricity Basics",
+        "subtopics": ["Electric current and drift velocity", "Ohm's law V = IR", "Resistance and resistivity", "Temperature dependence of resistance", "Colour code for resistors"],
+        "ncertChapter": "Chapter 3 (Class 12)",
+        "difficulty": "medium",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["I = nqAv_d", "R = ρL/A", "R_T = R₀(1+αΔT)", "P = VI = I²R = V²/R"]
+      },
+      "chemistry": {
+        "topic": "Revision — Organic Chemistry Key Reactions",
+        "subtopics": ["Named reactions — Aldol, Cannizzaro, Williamson, Gabriel, Diazotization", "Mechanism types — SN1, SN2, E1, E2, EAS", "Carbocation and carbanion stability", "Functional group interconversions", "Important reagents and their uses"],
+        "ncertChapter": "Chapters 10-13 (Class 12)",
+        "difficulty": "hard",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["All named reactions and mechanisms compiled"]
+      },
+      "math": {
+        "topic": "3D Geometry — Lines & Planes",
+        "subtopics": ["Equation of line in 3D — vector and Cartesian form", "Angle between two lines", "Distance of point from a line", "Equation of plane — different forms", "Angle between line and plane"],
+        "ncertChapter": "Chapter 11 (Class 12)",
+        "difficulty": "hard",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["Line: r⃗ = a⃗ + λb⃗", "Plane: r⃗·n⃗ = d", "Distance from point to plane = |ax₀+by₀+cz₀-d|/√(a²+b²+c²)"]
+      },
+      "quiz": {"questionCount": 10, "timeMinutes": 10, "topics": ["Current Electricity", "Organic Mechanisms", "3D Geometry Lines & Planes"]},
+      "test": {"questionCount": 10, "timeMinutes": 15, "topics": ["Day 42 topics"]}
+    },
+    {
+      "day": 43,
+      "date": "2026-05-29",
+      "weekday": "Friday",
+      "isRestDay": false,
+      "phase": 3,
+      "physics": {
+        "topic": "Circuits — Kirchhoff's Laws & Wheatstone Bridge",
+        "subtopics": ["Kirchhoff's Current Law (KCL)", "Kirchhoff's Voltage Law (KVL)", "Wheatstone bridge condition", "Metre bridge", "Potentiometer principle and uses"],
+        "ncertChapter": "Chapter 3 (Class 12)",
+        "difficulty": "hard",
+        "estimatedTime": "60 min",
+        "keyFormulas": ["KCL: ΣI = 0 at junction", "KVL: ΣV = 0 in loop", "Balanced bridge: P/Q = R/S"]
+      },
+      "chemistry": {
+        "topic": "Full Chemistry Revision — Phase 3 Ends",
+        "subtopics": ["Physical chemistry key formulae", "Inorganic chemistry reactions and trends", "Organic chemistry reactions and mechanisms", "Common mistakes in JEE Chemistry", "Last-minute tips"],
+        "ncertChapter": "All chapters",
+        "difficulty": "hard",
+        "estimatedTime": "90 min",
+        "keyFormulas": ["Comprehensive formula sheet — all chapters"]
+      },
+      "math": {
+        "topic": "Full Math Revision — Phase 3 Ends",
+        "subtopics": ["Algebra: sequences, quadratics, binomial", "Coordinate geometry: all conics", "Calculus: limits, derivatives, integrals", "Probability and statistics", "3D geometry and vectors"],
+        "ncertChapter": "All chapters",
+        "difficulty": "hard",
+        "estimatedTime": "90 min",
+        "keyFormulas": ["Comprehensive formula sheet — all chapters"]
+      },
+      "quiz": {"questionCount": 15, "timeMinutes": 15, "topics": ["Kirchhoff's Laws", "Chemistry Phase 3 Revision", "Math Phase 3 Revision"]},
+      "test": {"questionCount": 30, "timeMinutes": 45, "topics": ["Phase 3 comprehensive mock test — all subjects"]}
+    },
+    {
+      "day": null,
+      "date": "2026-05-30",
+      "weekday": "Saturday",
+      "isRestDay": true,
+      "message": "Rest Day — Rest is part of learning. Recharge today!"
+    },
+    {
+      "day": null,
+      "date": "2026-05-31",
+      "weekday": "Sunday",
+      "isRestDay": true,
+      "message": "Rest Day — Rest is part of learning. Recharge today!"
+    },
+    {
+      "day": 44,
+      "date": "2026-06-01",
+      "weekday": "Monday",
+      "isRestDay": false,
+      "phase": 4,
+      "physics": {
+        "topic": "Full Physics Revision Day 1 — Mechanics",
+        "subtopics": ["Kinematics: all equations and graphs", "Newton's Laws: FBD, friction, pulley", "Work-Energy-Power: all theorems", "Centre of mass and momentum", "Rotation: MOI, angular momentum, rolling"],
+        "ncertChapter": "Chapters 2-8 (Class 11)",
+        "difficulty": "hard",
+        "estimatedTime": "90 min",
+        "keyFormulas": ["All mechanics formulae — consolidated sheet"]
+      },
+      "chemistry": {
+        "topic": "Full Chemistry Revision Day 1 — Physical Chemistry",
+        "subtopics": ["Mole concept, stoichiometry", "Atomic structure, periodic trends", "Chemical bonding revision", "Thermodynamics: ΔG, ΔH, ΔS", "Equilibrium: Kc, Kp, pH, buffers"],
+        "ncertChapter": "Chapters 1-7 (Class 11)",
+        "difficulty": "hard",
+        "estimatedTime": "90 min",
+        "keyFormulas": ["All physical chemistry formulae — consolidated sheet"]
+      },
+      "math": {
+        "topic": "Full Math Revision Day 1 — Algebra & Trigonometry",
+        "subtopics": ["Sets, relations, functions", "Trigonometry — identities, equations, inverse", "Complex numbers", "Quadratics and inequalities", "Sequences AP/GP, Binomial theorem"],
+        "ncertChapter": "Chapters 1-9 (Class 11)",
+        "difficulty": "hard",
+        "estimatedTime": "90 min",
+        "keyFormulas": ["All algebra and trig formulae — consolidated sheet"]
+      },
+      "quiz": {"questionCount": 20, "timeMinutes": 25, "topics": ["Mechanics PYQ", "Physical Chemistry PYQ", "Algebra & Trig PYQ"]},
+      "test": {"questionCount": 45, "timeMinutes": 60, "topics": ["Full JEE-style mock test — all sections"]}
+    }
+  ]
+}
